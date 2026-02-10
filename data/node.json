@@ -1,0 +1,124 @@
+{
+  "name": "Node.js",
+  "children": [
+    {
+      "name": "Runtime Basics",
+      "children": [
+        { "name": "Node vs Browser" },
+        { "name": "globalThis" },
+        { "name": "CommonJS vs ESM" },
+        { "name": "process" }
+      ]
+    },
+    {
+      "name": "Modules",
+      "children": [
+        { "name": "require / module.exports" },
+        { "name": "import / export" },
+        { "name": "package.json" },
+        { "name": "node_modules" },
+        { "name": "semantic versioning" }
+      ]
+    },
+    {
+      "name": "Async & Event Loop",
+      "children": [
+        { "name": "callbacks" },
+        { "name": "Promises" },
+        { "name": "async/await" },
+        { "name": "microtasks vs macrotasks" },
+        { "name": "timers" }
+      ]
+    },
+    {
+      "name": "Core APIs",
+      "children": [
+        {
+          "name": "fs",
+          "children": [
+            { "name": "sync vs async" },
+            { "name": "streams" },
+            { "name": "path" }
+          ]
+        },
+        { "name": "http" },
+        { "name": "https" },
+        { "name": "url" },
+        { "name": "crypto" }
+      ]
+    },
+    {
+      "name": "Streams",
+      "children": [
+        { "name": "Readable" },
+        { "name": "Writable" },
+        { "name": "Transform" },
+        { "name": "pipeline" },
+        { "name": "backpressure" }
+      ]
+    },
+    {
+      "name": "Networking",
+      "children": [
+        { "name": "REST basics" },
+        { "name": "WebSockets" },
+        { "name": "CORS (concept)" },
+        { "name": "TLS basics" }
+      ]
+    },
+    {
+      "name": "Express Ecosystem",
+      "children": [
+        { "name": "Express routing" },
+        { "name": "middleware" },
+        { "name": "error handling" },
+        { "name": "validation" }
+      ]
+    },
+    {
+      "name": "Databases",
+      "children": [
+        { "name": "PostgreSQL" },
+        { "name": "MongoDB" },
+        { "name": "ORMs (Prisma/Sequelize)" },
+        { "name": "migrations" }
+      ]
+    },
+    {
+      "name": "Testing",
+      "children": [
+        { "name": "Jest" },
+        { "name": "Vitest" },
+        { "name": "Supertest" },
+        { "name": "mocks/stubs" }
+      ]
+    },
+    {
+      "name": "Tooling",
+      "children": [
+        { "name": "npm" },
+        { "name": "pnpm" },
+        { "name": "yarn" },
+        { "name": "eslint" },
+        { "name": "prettier" }
+      ]
+    },
+    {
+      "name": "Security",
+      "children": [
+        { "name": "dependency audit" },
+        { "name": "secrets management" },
+        { "name": "OWASP basics" }
+      ]
+    },
+    {
+      "name": "Deployment",
+      "children": [
+        { "name": "env vars" },
+        { "name": "Docker basics" },
+        { "name": "reverse proxy (Nginx)" },
+        { "name": "process managers (PM2)" }
+      ]
+    }
+  ]
+}

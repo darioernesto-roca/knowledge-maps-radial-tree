@@ -1,0 +1,147 @@
+{
+  "name": "Python",
+  "children": [
+    {
+      "name": "Fundamentals",
+      "children": [
+        { "name": "Interpreter vs Script" },
+        { "name": "REPL" },
+        { "name": "Indentation" },
+        { "name": "Variables and Names" },
+        { "name": "Truthy/Falsy" }
+      ]
+    },
+    {
+      "name": "Data Types",
+      "children": [
+        { "name": "int / float" },
+        { "name": "str" },
+        { "name": "bool" },
+        { "name": "None" },
+        { "name": "bytes / bytearray" }
+      ]
+    },
+    {
+      "name": "Collections",
+      "children": [
+        {
+          "name": "list",
+          "children": [
+            { "name": "slicing" },
+            { "name": "comprehensions" },
+            { "name": "sort vs sorted" }
+          ]
+        },
+        {
+          "name": "dict",
+          "children": [
+            { "name": "keys/values/items" },
+            { "name": "dict comprehension" },
+            { "name": "defaultdict" }
+          ]
+        },
+        { "name": "tuple" },
+        { "name": "set" }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "children": [
+        { "name": "if / elif / else" },
+        { "name": "for loops" },
+        { "name": "while loops" },
+        { "name": "break / continue" },
+        { "name": "match/case" }
+      ]
+    },
+    {
+      "name": "Functions",
+      "children": [
+        { "name": "def" },
+        { "name": "args / kwargs" },
+        { "name": "scope (LEGB)" },
+        { "name": "lambda" },
+        { "name": "decorators" },
+        { "name": "generators (yield)" }
+      ]
+    },
+    {
+      "name": "OOP",
+      "children": [
+        { "name": "class / instance" },
+        { "name": "methods" },
+        { "name": "__init__" },
+        { "name": "inheritance" },
+        { "name": "dunder methods" },
+        { "name": "dataclasses" }
+      ]
+    },
+    {
+      "name": "Modules & Packaging",
+      "children": [
+        { "name": "import system" },
+        { "name": "virtualenv / venv" },
+        { "name": "pip" },
+        { "name": "pyproject.toml" },
+        { "name": "Poetry / uv (optional)" }
+      ]
+    },
+    {
+      "name": "Errors & Debugging",
+      "children": [
+        { "name": "try/except/finally" },
+        { "name": "raise" },
+        { "name": "custom exceptions" },
+        { "name": "tracebacks" },
+        { "name": "pdb" },
+        { "name": "logging" }
+      ]
+    },
+    {
+      "name": "I/O",
+      "children": [
+        { "name": "files" },
+        { "name": "pathlib" },
+        { "name": "JSON" },
+        { "name": "CSV" },
+        { "name": "HTTP requests (requests)" }
+      ]
+    },
+    {
+      "name": "Concurrency",
+      "children": [
+        { "name": "threading" },
+        { "name": "multiprocessing" },
+        { "name": "asyncio" },
+        { "name": "GIL (concept)" }
+      ]
+    },
+    {
+      "name": "Testing",
+      "children": [
+        { "name": "unittest" },
+        { "name": "pytest" },
+        { "name": "fixtures" },
+        { "name": "mocking" }
+      ]
+    },
+    {
+      "name": "Quality & Tooling",
+      "children": [
+        { "name": "type hints" },
+        { "name": "mypy / pyright" },
+        { "name": "black" },
+        { "name": "ruff" }
+      ]
+    },
+    {
+      "name": "Web & Ecosystem",
+      "children": [
+        { "name": "FastAPI" },
+        { "name": "Django" },
+        { "name": "Flask" },
+        { "name": "SQLAlchemy" }
+      ]
+    }
+  ]
+}

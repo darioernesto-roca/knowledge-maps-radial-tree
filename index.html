@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Radial tree component</title>
+<title>Knowledge Map</title>
 <link rel="stylesheet" type="text/css" href="./inspector.css">
+<style>
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    margin: 24px;
+    line-height: 1.4;
+    color: #1f2937;
+  }
+
+  .page {
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+
+  #topic-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .topic-button {
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #111827;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .topic-button:hover {
+    background: #f9fafb;
+  }
+
+  .topic-button.is-active {
+    background: #1f2937;
+    color: #fff;
+    border-color: #1f2937;
+  }
+
+  #topic-title {
+    margin: 0 0 8px;
+  }
+
+  #topic-description {
+    margin: 0 0 20px;
+    color: #4b5563;
+    max-width: 900px;
+  }
+
+  #chart-container {
+    min-height: 180px;
+  }
+
+  .status {
+    color: #374151;
+    margin: 8px 0;
+  }
+
+  .status-error {
+    color: #b91c1c;
+  }
+</style>
 <body>
-<script type="module">
+  <main class="page">
+    <div id="topic-buttons" aria-label="Topic selector"></div>
+    <h1 id="topic-title"></h1>
+    <p id="topic-description"></p>
+    <div id="chart-container"></div>
+  </main>
 
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
-
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
-
-</script>
+  <script type="module" src="./app.js"></script>
+</body>

@@ -1,0 +1,14 @@
+{
+  "name": "608289addb874ed7",
+  "main": "608289addb874ed7@278.js",
+  "version": "278.0.0",
+  "homepage": "https://observablehq.com/d/608289addb874ed7",
+  "author": {
+    "name": "RocaDev",
+    "url": "https://observablehq.com/@rocadev"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "name": "Java",
+  "children": [
+    {
+      "name": "Fundamentals",
+      "children": [
+        { "name": "JDK vs JRE vs JVM" },
+        { "name": "compile vs run" },
+        { "name": "main method" },
+        { "name": "packages" }
+      ]
+    },
+    {
+      "name": "Syntax & Types",
+      "children": [
+        { "name": "primitive types" },
+        { "name": "reference types" },
+        { "name": "String basics" },
+        { "name": "var (local inference)" }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "children": [
+        { "name": "if/switch" },
+        { "name": "for/while" },
+        { "name": "break/continue" }
+      ]
+    },
+    {
+      "name": "OOP",
+      "children": [
+        { "name": "classes/objects" },
+        { "name": "encapsulation" },
+        { "name": "inheritance" },
+        { "name": "polymorphism" },
+        { "name": "interfaces" },
+        { "name": "abstract classes" }
+      ]
+    },
+    {
+      "name": "Collections",
+      "children": [
+        { "name": "List" },
+        { "name": "Set" },
+        { "name": "Map" },
+        { "name": "Iterator" },
+        { "name": "Comparator" }
+      ]
+    },
+    {
+      "name": "Exceptions",
+      "children": [
+        { "name": "try/catch/finally" },
+        { "name": "checked vs unchecked" },
+        { "name": "throw / throws" }
+      ]
+    },
+    {
+      "name": "Generics",
+      "children": [
+        { "name": "type parameters" },
+        { "name": "wildcards" },
+        { "name": "bounds" }
+      ]
+    },
+    {
+      "name": "Functional Java",
+      "children": [
+        { "name": "lambdas" },
+        { "name": "Streams API" },
+        { "name": "Optional" }
+      ]
+    },
+    {
+      "name": "I/O & NIO",
+      "children": [
+        { "name": "Files/Paths" },
+        { "name": "buffers/channels" },
+        { "name": "serialization" }
+      ]
+    },
+    {
+      "name": "Concurrency",
+      "children": [
+        { "name": "threads" },
+        { "name": "Executors" },
+        { "name": "synchronization" },
+        { "name": "CompletableFuture" }
+      ]
+    },
+    {
+      "name": "Build Tools",
+      "children": [
+        { "name": "Maven" },
+        { "name": "Gradle" },
+        { "name": "dependency management" }
+      ]
+    },
+    {
+      "name": "Testing",
+      "children": [
+        { "name": "JUnit" },
+        { "name": "Mockito" },
+        { "name": "integration tests" }
+      ]
+    },
+    {
+      "name": "Ecosystem",
+      "children": [
+        { "name": "Spring Boot" },
+        { "name": "JPA/Hibernate" },
+        { "name": "REST APIs" }
+      ]
+    }
+  ]
+}

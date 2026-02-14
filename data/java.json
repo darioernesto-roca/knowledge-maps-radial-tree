@@ -6,87 +6,278 @@
       "children": [
         { "name": "JDK vs JRE vs JVM" },
         { "name": "compile vs run" },
-        { "name": "main method" },
-        { "name": "packages" }
+        { "name": "bytecode" },
+        { "name": "classpath" },
+        {
+          "name": "Entry Point",
+          "children": [
+            { "name": "public static void main(String[] args)" },
+            { "name": "command line arguments" },
+            { "name": "JAR execution" }
+          ]
+        },
+        {
+          "name": "Packages & Imports",
+          "children": [
+            { "name": "package declaration" },
+            { "name": "import statement" },
+            { "name": "static import" },
+            { "name": "package naming conventions" }
+          ]
+        }
       ]
     },
     {
       "name": "Syntax & Types",
       "children": [
-        { "name": "primitive types" },
-        { "name": "reference types" },
-        { "name": "String basics" },
-        { "name": "var (local inference)" }
+        {
+          "name": "Primitive Types",
+          "children": [
+            { "name": "byte" },
+            { "name": "short" },
+            { "name": "int" },
+            { "name": "long" },
+            { "name": "float" },
+            { "name": "double" },
+            { "name": "char" },
+            { "name": "boolean" }
+          ]
+        },
+        {
+          "name": "Reference Types",
+          "children": [
+            { "name": "classes" },
+            { "name": "interfaces" },
+            { "name": "arrays" },
+            { "name": "enums" },
+            { "name": "records" }
+          ]
+        },
+        {
+          "name": "Wrapper Classes",
+          "children": [
+            { "name": "Integer" },
+            { "name": "Long" },
+            { "name": "Double" },
+            { "name": "Boolean" },
+            { "name": "Character" },
+            { "name": "autoboxing" },
+            { "name": "unboxing" }
+          ]
+        },
+        {
+          "name": "Variables",
+          "children": [
+            { "name": "local variables" },
+            { "name": "instance variables" },
+            { "name": "static variables" },
+            { "name": "final constants" },
+            { "name": "var (local inference)" },
+            { "name": "scope" },
+            { "name": "shadowing" }
+          ]
+        },
+        {
+          "name": "Operators",
+          "children": [
+            { "name": "arithmetic" },
+            { "name": "comparison" },
+            { "name": "logical" },
+            { "name": "bitwise" },
+            { "name": "assignment" },
+            { "name": "ternary operator" }
+          ]
+        }
       ]
     },
     {
       "name": "Control Flow",
       "children": [
-        { "name": "if/switch" },
-        { "name": "for/while" },
-        { "name": "break/continue" }
+        {
+          "name": "Conditionals",
+          "children": [
+            { "name": "if" },
+            { "name": "if-else" },
+            { "name": "switch statement" },
+            { "name": "switch expressions (Java 14+)" },
+            { "name": "pattern matching (Java 17+)" }
+          ]
+        },
+        {
+          "name": "Loops",
+          "children": [
+            { "name": "for" },
+            { "name": "enhanced for-each" },
+            { "name": "while" },
+            { "name": "do-while" },
+            { "name": "break" },
+            { "name": "continue" },
+            { "name": "labeled break" }
+          ]
+        }
       ]
     },
     {
       "name": "OOP",
       "children": [
-        { "name": "classes/objects" },
+        {
+          "name": "Classes & Objects",
+          "children": [
+            { "name": "fields" },
+            { "name": "methods" },
+            { "name": "constructors" },
+            { "name": "method overloading" },
+            { "name": "access modifiers" }
+          ]
+        },
         { "name": "encapsulation" },
-        { "name": "inheritance" },
-        { "name": "polymorphism" },
-        { "name": "interfaces" },
-        { "name": "abstract classes" }
+        {
+          "name": "inheritance",
+          "children": [
+            { "name": "extends" },
+            { "name": "super" },
+            { "name": "method overriding" },
+            { "name": "final methods" }
+          ]
+        },
+        {
+          "name": "polymorphism",
+          "children": [
+            { "name": "compile-time polymorphism" },
+            { "name": "runtime polymorphism" },
+            { "name": "upcasting" },
+            { "name": "downcasting" }
+          ]
+        },
+        {
+          "name": "interfaces",
+          "children": [
+            { "name": "implements" },
+            { "name": "default methods" },
+            { "name": "static methods" },
+            { "name": "functional interfaces" }
+          ]
+        },
+        { "name": "abstract classes" },
+        { "name": "records" },
+        { "name": "enums" }
       ]
     },
     {
       "name": "Collections",
       "children": [
-        { "name": "List" },
-        { "name": "Set" },
-        { "name": "Map" },
+        {
+          "name": "Core Interfaces",
+          "children": [
+            { "name": "Collection" },
+            { "name": "List" },
+            { "name": "Set" },
+            { "name": "Queue" },
+            { "name": "Map" }
+          ]
+        },
+        {
+          "name": "Implementations",
+          "children": [
+            { "name": "ArrayList" },
+            { "name": "LinkedList" },
+            { "name": "HashSet" },
+            { "name": "TreeSet" },
+            { "name": "HashMap" },
+            { "name": "TreeMap" },
+            { "name": "LinkedHashMap" },
+            { "name": "PriorityQueue" }
+          ]
+        },
         { "name": "Iterator" },
-        { "name": "Comparator" }
+        { "name": "Comparator" },
+        { "name": "Comparable" }
       ]
     },
     {
       "name": "Exceptions",
       "children": [
         { "name": "try/catch/finally" },
+        { "name": "throw / throws" },
         { "name": "checked vs unchecked" },
-        { "name": "throw / throws" }
+        { "name": "custom exceptions" },
+        { "name": "try-with-resources" }
       ]
     },
     {
       "name": "Generics",
       "children": [
         { "name": "type parameters" },
+        { "name": "generic classes" },
+        { "name": "generic methods" },
         { "name": "wildcards" },
-        { "name": "bounds" }
+        { "name": "? extends" },
+        { "name": "? super" },
+        { "name": "type erasure" }
       ]
     },
     {
       "name": "Functional Java",
       "children": [
         { "name": "lambdas" },
-        { "name": "Streams API" },
+        { "name": "method references" },
+        {
+          "name": "Streams API",
+          "children": [
+            { "name": "map" },
+            { "name": "filter" },
+            { "name": "flatMap" },
+            { "name": "reduce" },
+            { "name": "collect" },
+            { "name": "parallel streams" }
+          ]
+        },
+        {
+          "name": "Functional Interfaces",
+          "children": [
+            { "name": "Predicate" },
+            { "name": "Function" },
+            { "name": "Consumer" },
+            { "name": "Supplier" }
+          ]
+        },
         { "name": "Optional" }
       ]
     },
     {
       "name": "I/O & NIO",
       "children": [
-        { "name": "Files/Paths" },
-        { "name": "buffers/channels" },
+        { "name": "File" },
+        { "name": "Files" },
+        { "name": "Path" },
+        { "name": "BufferedReader/Writer" },
+        { "name": "buffers" },
+        { "name": "channels" },
         { "name": "serialization" }
       ]
     },
     {
       "name": "Concurrency",
       "children": [
-        { "name": "threads" },
+        { "name": "Thread" },
+        { "name": "Runnable" },
+        { "name": "Callable" },
         { "name": "Executors" },
         { "name": "synchronization" },
-        { "name": "CompletableFuture" }
+        { "name": "ReentrantLock" },
+        { "name": "CompletableFuture" },
+        { "name": "ForkJoinPool" }
+      ]
+    },
+    {
+      "name": "JVM Internals",
+      "children": [
+        { "name": "heap" },
+        { "name": "stack" },
+        { "name": "metaspace" },
+        { "name": "garbage collection (G1, ZGC)" },
+        { "name": "class loaders" },
+        { "name": "Java Memory Model" }
       ]
     },
     {
@@ -94,7 +285,8 @@
       "children": [
         { "name": "Maven" },
         { "name": "Gradle" },
-        { "name": "dependency management" }
+        { "name": "dependency management" },
+        { "name": "JAR/WAR packaging" }
       ]
     },
     {
@@ -102,6 +294,7 @@
       "children": [
         { "name": "JUnit" },
         { "name": "Mockito" },
+        { "name": "test lifecycle" },
         { "name": "integration tests" }
       ]
     },
@@ -109,8 +302,13 @@
       "name": "Ecosystem",
       "children": [
         { "name": "Spring Boot" },
+        { "name": "Spring MVC" },
+        { "name": "Spring Data" },
+        { "name": "Spring Security" },
         { "name": "JPA/Hibernate" },
-        { "name": "REST APIs" }
+        { "name": "REST APIs" },
+        { "name": "Docker + Java" },
+        { "name": "Microservices" }
       ]
     }
   ]

@@ -4,26 +4,67 @@
     {
       "name": "Fundamentals",
       "children": [
-        { "name": "ECMAScript and runtime environments" },
+        { "name": "ECMAScript vs runtime environments (browser/Node/Deno)" },
         { "name": "Values vs references" },
-        { "name": "Primitive types" },
+        { "name": "Primitive types (string, number, boolean, null, undefined, symbol, bigint)" },
+        { "name": "Reference types (object, array, function)" },
         { "name": "Dynamic typing" },
+        { "name": "Type coercion (implicit/explicit)" },
         { "name": "Strict mode" },
-        { "name": "Expressions and statements" }
+        { "name": "Expressions vs statements" },
+        { "name": "Truthy / falsy" },
+        { "name": "NaN and Infinity" },
+        { "name": "Memory model (stack vs heap concept)" }
       ]
     },
     {
-      "name": "Syntax & Operators",
+      "name": "Syntax",
       "children": [
-        { "name": "let / const / var" },
-        { "name": "Scope and hoisting" },
-        { "name": "Template literals" },
-        { "name": "Destructuring" },
-        { "name": "Spread and rest" },
-        { "name": "Optional chaining (?.)" },
-        { "name": "Nullish coalescing (??)" },
-        { "name": "Ternary operator" },
-        { "name": "Equality (== vs ===)" }
+        {
+          "name": "Variables",
+          "children": [
+            { "name": "var (legacy)" },
+            { "name": "let" },
+            { "name": "const" },
+            { "name": "scope (block/function/global)" },
+            { "name": "hoisting" },
+            { "name": "temporal dead zone (TDZ)" }
+          ]
+        },
+        {
+          "name": "Operators",
+          "children": [
+            { "name": "arithmetic operators" },
+            { "name": "comparison operators" },
+            { "name": "logical operators" },
+            { "name": "bitwise operators" },
+            { "name": "ternary operator" },
+            { "name": "optional chaining (?.)" },
+            { "name": "nullish coalescing (??)" },
+            { "name": "spread operator (...)" },
+            { "name": "rest operator (...)" },
+            { "name": "comma operator (rare)" },
+            { "name": "equality (== vs ===)" }
+          ]
+        },
+        {
+          "name": "Destructuring",
+          "children": [
+            { "name": "object destructuring" },
+            { "name": "array destructuring" },
+            { "name": "default values" },
+            { "name": "renaming variables" },
+            { "name": "nested destructuring" }
+          ]
+        },
+        {
+          "name": "Template literals",
+          "children": [
+            { "name": "interpolation (${...})" },
+            { "name": "multiline strings" },
+            { "name": "tagged templates (advanced)" }
+          ]
+        }
       ]
     },
     {
@@ -31,146 +72,260 @@
       "children": [
         { "name": "if / else" },
         { "name": "switch" },
-        { "name": "for / while / do...while" },
-        { "name": "for...of and for...in" },
+        { "name": "for loop" },
+        { "name": "while loop" },
+        { "name": "do...while loop" },
+        { "name": "for...in" },
+        { "name": "for...of" },
         { "name": "break / continue" },
         { "name": "try / catch / finally" },
-        { "name": "throw and custom errors" }
+        { "name": "throw" },
+        { "name": "Error objects (Error, TypeError, RangeError)" }
       ]
     },
     {
       "name": "Functions",
       "children": [
-        { "name": "Function declarations and expressions" },
-        { "name": "Arrow functions" },
-        { "name": "Parameters and defaults" },
-        { "name": "Return values" },
-        { "name": "Closures" },
-        { "name": "Higher-order functions" },
-        { "name": "Callbacks" },
-        { "name": "Recursion" },
-        { "name": "this binding (call/apply/bind)" }
-      ]
-    },
-    {
-      "name": "Collections",
-      "children": [
+        { "name": "function declaration" },
+        { "name": "function expression" },
+        { "name": "arrow functions" },
+        { "name": "default parameters" },
+        { "name": "rest parameters" },
+        { "name": "return values" },
+        { "name": "callback functions" },
+        { "name": "higher-order functions" },
+        { "name": "closures" },
+        { "name": "recursion" },
+        { "name": "IIFE" },
         {
-          "name": "Arrays",
+          "name": "this",
           "children": [
-            { "name": "map / filter / reduce" },
-            { "name": "find / some / every" },
-            { "name": "slice / splice / concat" },
-            { "name": "sort and compare functions" }
-          ]
-        },
-        {
-          "name": "Objects",
-          "children": [
-            { "name": "Property access" },
-            { "name": "Object.keys / values / entries" },
-            { "name": "Computed properties" },
-            { "name": "Shallow copy pitfalls" }
-          ]
-        },
-        {
-          "name": "Map and Set",
-          "children": [
-            { "name": "Unique values with Set" },
-            { "name": "Key-value mapping with Map" },
-            { "name": "WeakMap / WeakSet concept" }
+            { "name": "this binding rules" },
+            { "name": "call()" },
+            { "name": "apply()" },
+            { "name": "bind()" },
+            { "name": "arrow functions and lexical this" }
           ]
         }
       ]
     },
     {
-      "name": "Object-Oriented JavaScript",
+      "name": "Strings",
       "children": [
-        { "name": "Prototype chain" },
-        { "name": "Constructor functions" },
-        { "name": "class syntax" },
-        { "name": "instanceof" },
-        { "name": "Inheritance with extends" },
-        { "name": "Static methods" },
-        { "name": "Private fields (#)" }
+        { "name": "character access" },
+        { "name": "template strings" },
+        { "name": "escape characters" },
+        { "name": "length" },
+        { "name": "includes()" },
+        { "name": "startsWith()" },
+        { "name": "endsWith()" },
+        { "name": "indexOf() / lastIndexOf()" },
+        { "name": "slice() / substring()" },
+        { "name": "replace() / replaceAll()" },
+        { "name": "split()" },
+        { "name": "toLowerCase() / toUpperCase()" },
+        { "name": "trim() / trimStart() / trimEnd()" }
       ]
     },
     {
-      "name": "Asynchronous JavaScript",
+      "name": "Number",
       "children": [
-        { "name": "Event loop" },
-        { "name": "Call stack and task queues" },
-        { "name": "setTimeout / setInterval" },
-        { "name": "Promises" },
+        { "name": "Number()" },
+        { "name": "parseInt()" },
+        { "name": "parseFloat()" },
+        { "name": "toFixed()" },
+        { "name": "toPrecision()" },
+        { "name": "Math (random, floor, ceil, round)" },
+        { "name": "NaN handling (Number.isNaN)" },
+        { "name": "BigInt (concept)" }
+      ]
+    },
+    {
+      "name": "Arrays",
+      "children": [
+        { "name": "push() / pop()" },
+        { "name": "shift() / unshift()" },
+        { "name": "slice() / splice()" },
+        { "name": "concat()" },
+        { "name": "includes()" },
+        { "name": "indexOf() / findIndex()" },
+        { "name": "find()" },
+        { "name": "some()" },
+        { "name": "every()" },
+        { "name": "map()" },
+        { "name": "filter()" },
+        { "name": "reduce()" },
+        { "name": "sort() (compare function)" },
+        { "name": "flat() / flatMap()" },
+        { "name": "Array.from()" },
+        { "name": "Array.isArray()" }
+      ]
+    },
+    {
+      "name": "Objects",
+      "children": [
+        { "name": "property access (dot vs bracket)" },
+        { "name": "dynamic property names" },
+        { "name": "computed properties" },
+        { "name": "Object.keys()" },
+        { "name": "Object.values()" },
+        { "name": "Object.entries()" },
+        { "name": "Object.assign()" },
+        { "name": "spread copy ({...obj})" },
+        { "name": "shallow copy pitfalls" },
+        { "name": "destructuring" },
+        { "name": "Object.freeze() / Object.seal()" },
+        { "name": "prototype chain (concept)" }
+      ]
+    },
+    {
+      "name": "Classes",
+      "children": [
+        { "name": "class keyword" },
+        { "name": "constructor" },
+        { "name": "instance methods" },
+        { "name": "static methods" },
+        { "name": "getters / setters" },
+        { "name": "private fields (#)" },
+        {
+          "name": "Inheritance",
+          "children": [
+            { "name": "extends" },
+            { "name": "super()" },
+            { "name": "prototype inheritance" },
+            { "name": "subclassing built-ins (advanced)" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Promises",
+      "children": [
+        { "name": "promise states (pending/fulfilled/rejected)" },
+        { "name": "new Promise" },
+        { "name": "then()" },
+        { "name": "catch()" },
+        { "name": "finally()" },
         { "name": "async / await" },
-        { "name": "Error handling in async code" },
-        { "name": "AbortController and cancellation" }
+        { "name": "Promise.resolve()" },
+        { "name": "Promise.reject()" },
+        { "name": "Promise.all()" },
+        { "name": "Promise.race()" },
+        { "name": "Promise.any()" },
+        { "name": "Promise.allSettled()" },
+        { "name": "top-level await (ESM)" }
       ]
     },
     {
-      "name": "Modules & Tooling",
+      "name": "Modules",
       "children": [
-        { "name": "ES Modules (import/export)" },
-        { "name": "CommonJS basics" },
-        { "name": "npm scripts" },
-        { "name": "package.json essentials" },
-        { "name": "Semantic versioning" },
-        { "name": "Bundlers (Vite/Webpack concept)" },
-        { "name": "Transpilation (Babel concept)" }
+        { "name": "script type=module" },
+        { "name": "import" },
+        { "name": "export" },
+        { "name": "default export" },
+        { "name": "named exports" },
+        { "name": "dynamic import()" },
+        { "name": "CommonJS require/module.exports (Node concept)" },
+        { "name": "npm basics (package.json concept)" },
+        { "name": "bundlers concept (Vite/Webpack)" }
       ]
     },
     {
-      "name": "Browser APIs",
+      "name": "DOM",
       "children": [
         {
-          "name": "DOM",
+          "name": "Selection",
           "children": [
-            { "name": "Querying elements" },
-            { "name": "Create / append / remove nodes" },
-            { "name": "classList and attributes" },
-            { "name": "Event listeners" },
-            { "name": "Event propagation" }
+            { "name": "document" },
+            { "name": "document.body" },
+            { "name": "document.documentElement" },
+            { "name": "document.getElementById()" },
+            { "name": "document.getElementsByClassName()" },
+            { "name": "document.getElementsByTagName()" },
+            { "name": "document.querySelector()" },
+            { "name": "document.querySelectorAll()" },
+            { "name": "element.closest()" },
+            { "name": "NodeList" },
+            { "name": "NodeList to Array" }
           ]
         },
         {
-          "name": "Network",
+          "name": "HTML Element",
           "children": [
-            { "name": "fetch API" },
-            { "name": "HTTP methods" },
-            { "name": "Request / response lifecycle" },
-            { "name": "JSON parsing and serialization" }
+            { "name": "classList.add()" },
+            { "name": "classList.remove()" },
+            { "name": "classList.contains()" },
+            { "name": "classList.replace()" },
+            { "name": "classList.toggle()" },
+            { "name": "dataset" },
+            { "name": "getAttribute()" },
+            { "name": "setAttribute()" },
+            { "name": "style" },
+            { "name": "textContent" },
+            { "name": "value" },
+            { "name": "innerHTML" },
+            { "name": "insertAdjacentHTML()" },
+            { "name": "appendChild()" },
+            { "name": "remove()" },
+            { "name": "removeAttribute()" },
+            { "name": "parentElement" },
+            { "name": "document.createElement()" },
+            { "name": "document.appendChild()" }
           ]
         },
         {
-          "name": "Storage",
+          "name": "Events",
           "children": [
-            { "name": "localStorage / sessionStorage" },
-            { "name": "Cookies basics" },
-            { "name": "IndexedDB concept" }
+            { "name": "event details" },
+            { "name": "event.target" },
+            { "name": "event.currentTarget" },
+            { "name": "event.preventDefault()" },
+            { "name": "event propagation" },
+            { "name": "DOM content loaded" },
+            { "name": "event bubbling and propagation" },
+            { "name": "element.addEventListener()" },
+            { "name": "element.removeEventListener()" },
+            { "name": "click" },
+            { "name": "submit" },
+            { "name": "keydown / keyup" },
+            { "name": "focus / blur" },
+            { "name": "scroll" }
           ]
         }
       ]
     },
     {
-      "name": "Testing & Quality",
+      "name": "Fetch API",
       "children": [
-        { "name": "Unit testing concepts" },
-        { "name": "Jest / Vitest basics" },
-        { "name": "Linting with ESLint" },
-        { "name": "Formatting with Prettier" },
-        { "name": "Debugging with browser devtools" },
-        { "name": "Source maps concept" }
+        { "name": "fetch()" },
+        { "name": "Response status codes" },
+        { "name": "Response.json()" },
+        { "name": "Error handling" },
+        { "name": "GET" },
+        { "name": "POST" },
+        { "name": "PUT" },
+        { "name": "PATCH" },
+        { "name": "DELETE" },
+        { "name": "headers" },
+        { "name": "body (JSON.stringify)" },
+        { "name": "JSON.parse()" },
+        { "name": "AbortController (cancellation)" }
       ]
     },
     {
-      "name": "Security & Performance",
+      "name": "Misc",
       "children": [
-        { "name": "XSS and DOM sanitization" },
-        { "name": "CSRF awareness" },
-        { "name": "Dependency hygiene and audits" },
-        { "name": "Memory leaks (event listeners / closures)" },
-        { "name": "Debounce / throttle" },
-        { "name": "Code splitting and lazy loading" }
+        { "name": "typeof operator" },
+        { "name": "Strict Mode details" },
+        { "name": "immutability (concept)" },
+        { "name": "pure functions (concept)" },
+        { "name": "functional programming basics (concept)" },
+        { "name": "currying (concept)" },
+        { "name": "event delegation (concept)" },
+        { "name": "debounce / throttle (concept)" },
+        { "name": "JSON (serialize/deserialize)" },
+        { "name": "Date basics (concept)" },
+        { "name": "Intl (i18n basics concept)" }
       ]
     }
   ]

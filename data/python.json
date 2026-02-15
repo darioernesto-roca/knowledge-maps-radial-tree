@@ -6,19 +6,25 @@
       "children": [
         { "name": "Interpreter vs Script" },
         { "name": "REPL" },
-        { "name": "Indentation" },
+        { "name": "__name__ == '__main__'" },
+        { "name": "Indentation & Blocks" },
         { "name": "Variables and Names" },
-        { "name": "Truthy/Falsy" }
+        { "name": "Assignment & Mutability (concept)" },
+        { "name": "Truthy/Falsy" },
+        { "name": "Basic I/O (print/input)" },
+        { "name": "f-strings" }
       ]
     },
     {
       "name": "Data Types",
       "children": [
         { "name": "int / float" },
-        { "name": "str" },
         { "name": "bool" },
+        { "name": "str" },
         { "name": "None" },
-        { "name": "bytes / bytearray" }
+        { "name": "bytes / bytearray" },
+        { "name": "type() / isinstance()" },
+        { "name": "casting (int(), str(), float())" }
       ]
     },
     {
@@ -27,21 +33,43 @@
         {
           "name": "list",
           "children": [
-            { "name": "slicing" },
+            { "name": "indexing & slicing" },
+            { "name": "append/extend/insert/pop" },
             { "name": "comprehensions" },
-            { "name": "sort vs sorted" }
+            { "name": "sort vs sorted" },
+            { "name": "copy pitfalls (shared refs)" }
           ]
         },
         {
           "name": "dict",
           "children": [
             { "name": "keys/values/items" },
+            { "name": "get() and 'in'" },
             { "name": "dict comprehension" },
-            { "name": "defaultdict" }
+            { "name": "defaultdict" },
+            { "name": "Counter" }
           ]
         },
-        { "name": "tuple" },
-        { "name": "set" }
+        {
+          "name": "tuple",
+          "children": [
+            { "name": "immutability" },
+            { "name": "unpacking" }
+          ]
+        },
+        {
+          "name": "set",
+          "children": [
+            { "name": "unique values" },
+            { "name": "union/intersection/difference" }
+          ]
+        },
+        {
+          "name": "range",
+          "children": [
+            { "name": "iteration-friendly sequences" }
+          ]
+        }
       ]
     },
     {
@@ -51,60 +79,122 @@
         { "name": "for loops" },
         { "name": "while loops" },
         { "name": "break / continue" },
-        { "name": "match/case" }
+        { "name": "loop else clause" },
+        { "name": "match/case (3.10+)" },
+        { "name": "exceptions as control flow (when to avoid)" }
       ]
     },
     {
       "name": "Functions",
       "children": [
         { "name": "def" },
+        { "name": "return values" },
+        { "name": "default parameters" },
         { "name": "args / kwargs" },
+        { "name": "keyword-only params (*, ...)" },
         { "name": "scope (LEGB)" },
         { "name": "lambda" },
+        { "name": "higher-order functions (map/filter/reduce)" },
         { "name": "decorators" },
-        { "name": "generators (yield)" }
+        {
+          "name": "generators (yield)",
+          "children": [
+            { "name": "generator expressions" },
+            { "name": "yield from" }
+          ]
+        }
       ]
     },
     {
       "name": "OOP",
       "children": [
         { "name": "class / instance" },
-        { "name": "methods" },
         { "name": "__init__" },
-        { "name": "inheritance" },
-        { "name": "dunder methods" },
-        { "name": "dataclasses" }
+        { "name": "instance vs class attributes" },
+        { "name": "methods (instance/class/static)" },
+        { "name": "properties (@property)" },
+        { "name": "inheritance & super()" },
+        { "name": "multiple inheritance & MRO (concept)" },
+        {
+          "name": "dunder methods",
+          "children": [
+            { "name": "__repr__ / __str__" },
+            { "name": "__len__ / __iter__ / __next__" },
+            { "name": "__getitem__" },
+            { "name": "__eq__ / __hash__" }
+          ]
+        },
+        {
+          "name": "dataclasses",
+          "children": [
+            { "name": "@dataclass basics" },
+            { "name": "default_factory" },
+            { "name": "frozen=True (immutability)" }
+          ]
+        }
       ]
     },
     {
       "name": "Modules & Packaging",
       "children": [
-        { "name": "import system" },
+        {
+          "name": "import system",
+          "children": [
+            { "name": "import vs from ... import ..." },
+            { "name": "relative imports" },
+            { "name": "__init__.py" },
+            { "name": "import side effects (avoid)" }
+          ]
+        },
         { "name": "virtualenv / venv" },
         { "name": "pip" },
-        { "name": "pyproject.toml" },
-        { "name": "Poetry / uv (optional)" }
+        { "name": "requirements.txt" },
+        {
+          "name": "pyproject.toml",
+          "children": [
+            { "name": "build system concept" },
+            { "name": "tool configs (black/ruff/pytest)" }
+          ]
+        },
+        { "name": "Poetry / uv (optional)" },
+        { "name": "semantic versioning (concept)" }
       ]
     },
     {
       "name": "Errors & Debugging",
       "children": [
-        { "name": "try/except/finally" },
+        { "name": "try/except/else/finally" },
         { "name": "raise" },
         { "name": "custom exceptions" },
+        { "name": "exception chaining (concept)" },
         { "name": "tracebacks" },
         { "name": "pdb" },
-        { "name": "logging" }
+        {
+          "name": "logging",
+          "children": [
+            { "name": "log levels" },
+            { "name": "structured logging concept" }
+          ]
+        },
+        { "name": "assertions (debug vs production)" }
       ]
     },
     {
-      "name": "I/O",
+      "name": "I/O & Data Formats",
       "children": [
-        { "name": "files" },
+        {
+          "name": "files",
+          "children": [
+            { "name": "with open(...) as f" },
+            { "name": "text vs binary mode" }
+          ]
+        },
         { "name": "pathlib" },
-        { "name": "JSON" },
-        { "name": "CSV" },
-        { "name": "HTTP requests (requests)" }
+        { "name": "JSON (json module)" },
+        { "name": "CSV (csv module)" },
+        { "name": "datetime basics" },
+        { "name": "HTTP requests (requests)" },
+        { "name": "HTTP clients (httpx concept)" }
       ]
     },
     {
@@ -113,6 +203,9 @@
         { "name": "threading" },
         { "name": "multiprocessing" },
         { "name": "asyncio" },
+        { "name": "async/await" },
+        { "name": "tasks & gather (concept)" },
+        { "name": "timeouts & cancellation (concept)" },
         { "name": "GIL (concept)" }
       ]
     },
@@ -120,27 +213,102 @@
       "name": "Testing",
       "children": [
         { "name": "unittest" },
-        { "name": "pytest" },
-        { "name": "fixtures" },
-        { "name": "mocking" }
+        {
+          "name": "pytest",
+          "children": [
+            { "name": "fixtures" },
+            { "name": "parametrize" },
+            { "name": "markers" }
+          ]
+        },
+        {
+          "name": "mocking",
+          "children": [
+            { "name": "unittest.mock" },
+            { "name": "patching imports correctly (concept)" }
+          ]
+        },
+        { "name": "API testing (requests/Supertest equivalent concept)" }
       ]
     },
     {
       "name": "Quality & Tooling",
       "children": [
-        { "name": "type hints" },
+        {
+          "name": "type hints",
+          "children": [
+            { "name": "annotations" },
+            { "name": "Optional / Union" },
+            { "name": "list[str] modern types" },
+            { "name": "Protocols (concept)" }
+          ]
+        },
         { "name": "mypy / pyright" },
         { "name": "black" },
-        { "name": "ruff" }
+        { "name": "ruff" },
+        { "name": "pre-commit hooks (concept)" }
       ]
     },
     {
-      "name": "Web & Ecosystem",
+      "name": "Web & Ecosystem (Balanced)",
       "children": [
-        { "name": "FastAPI" },
-        { "name": "Django" },
-        { "name": "Flask" },
-        { "name": "SQLAlchemy" }
+        {
+          "name": "Flask",
+          "children": [
+            { "name": "routing" },
+            { "name": "request/response lifecycle" },
+            { "name": "blueprints" },
+            { "name": "extensions ecosystem" },
+            { "name": "WSGI deployment concept" }
+          ]
+        },
+        {
+          "name": "FastAPI",
+          "children": [
+            { "name": "routing & dependency injection" },
+            { "name": "Pydantic models" },
+            { "name": "OpenAPI / Swagger docs" },
+            { "name": "async endpoints" },
+            { "name": "ASGI deployment concept" }
+          ]
+        },
+        {
+          "name": "Django",
+          "children": [
+            { "name": "MTV pattern" },
+            { "name": "ORM" },
+            { "name": "migrations" },
+            { "name": "admin" },
+            { "name": "auth system" },
+            { "name": "middleware" }
+          ]
+        },
+        {
+          "name": "Databases",
+          "children": [
+            { "name": "SQLAlchemy" },
+            { "name": "Django ORM" },
+            { "name": "Alembic migrations" }
+          ]
+        },
+        {
+          "name": "Auth & Security",
+          "children": [
+            { "name": "sessions vs JWT" },
+            { "name": "cookies (HttpOnly/SameSite/Secure)" },
+            { "name": "CORS concept" },
+            { "name": "rate limiting concept" }
+          ]
+        },
+        {
+          "name": "Deployment",
+          "children": [
+            { "name": "Gunicorn (WSGI)" },
+            { "name": "Uvicorn (ASGI)" },
+            { "name": "Docker basics" },
+            { "name": "reverse proxy (Nginx concept)" }
+          ]
+        }
       ]
     }
   ]

@@ -4,30 +4,93 @@
     {
       "name": "Runtime Basics",
       "children": [
-        { "name": "Node vs Browser" },
-        { "name": "globalThis" },
-        { "name": "CommonJS vs ESM" },
-        { "name": "process" }
+        { "name": "Node vs Browser (APIs & environment)" },
+        { "name": "V8 + libuv (what each does)" },
+        { "name": "globalThis / global" },
+        { "name": "process (env, argv, exit, signals)" },
+        { "name": "Buffer (binary data, encodings)" },
+        { "name": "__dirname / __filename (CJS) vs import.meta.url (ESM)" },
+        { "name": "Exit codes & graceful shutdown" }
       ]
     },
     {
-      "name": "Modules",
+      "name": "Modules & Packages",
       "children": [
-        { "name": "require / module.exports" },
-        { "name": "import / export" },
-        { "name": "package.json" },
-        { "name": "node_modules" },
-        { "name": "semantic versioning" }
+        {
+          "name": "CommonJS (CJS)",
+          "children": [
+            { "name": "require()" },
+            { "name": "module.exports / exports" },
+            { "name": "caching behavior" }
+          ]
+        },
+        {
+          "name": "ES Modules (ESM)",
+          "children": [
+            { "name": "import / export" },
+            { "name": "default export" },
+            { "name": "dynamic import()" },
+            { "name": "\"type\": \"module\"" }
+          ]
+        },
+        {
+          "name": "package.json",
+          "children": [
+            { "name": "scripts" },
+            { "name": "dependencies vs devDependencies" },
+            { "name": "engines (node version)" },
+            { "name": "main / module / exports field" }
+          ]
+        },
+        { "name": "node_modules resolution" },
+        { "name": "Semantic Versioning (semver)" },
+        { "name": "Lockfiles (package-lock, pnpm-lock, yarn.lock)" },
+        { "name": "npx (run local/remote tools safely)" }
       ]
     },
     {
       "name": "Async & Event Loop",
       "children": [
-        { "name": "callbacks" },
-        { "name": "Promises" },
-        { "name": "async/await" },
-        { "name": "microtasks vs macrotasks" },
-        { "name": "timers" }
+        {
+          "name": "Async Patterns",
+          "children": [
+            { "name": "callbacks (error-first pattern)" },
+            { "name": "Promises (then/catch/finally)" },
+            { "name": "async/await (try/catch, parallel vs sequential)" }
+          ]
+        },
+        {
+          "name": "Task Queues",
+          "children": [
+            { "name": "microtasks (Promise jobs)" },
+            { "name": "process.nextTick queue" },
+            { "name": "macrotasks (timers, I/O callbacks)" }
+          ]
+        },
+        {
+          "name": "Timers",
+          "children": [
+            { "name": "setTimeout / clearTimeout" },
+            { "name": "setInterval / clearInterval" },
+            { "name": "setImmediate" }
+          ]
+        },
+        {
+          "name": "Event Loop Deep Dive",
+          "children": [
+            { "name": "phases overview" },
+            { "name": "why blocking the event loop is bad" },
+            { "name": "detecting event loop lag" }
+          ]
+        },
+        {
+          "name": "Events",
+          "children": [
+            { "name": "EventEmitter (on, once, emit)" },
+            { "name": "removing listeners" },
+            { "name": "error events & crash patterns" }
+          ]
+        }
       ]
     },
     {
@@ -37,87 +100,434 @@
           "name": "fs",
           "children": [
             { "name": "sync vs async" },
-            { "name": "streams" },
-            { "name": "path" }
+            { "name": "fs.promises" },
+            { "name": "readFile / writeFile" },
+            { "name": "mkdir / readdir" },
+            { "name": "watch / watchFile" }
           ]
         },
-        { "name": "http" },
-        { "name": "https" },
-        { "name": "url" },
-        { "name": "crypto" }
+        {
+          "name": "path",
+          "children": [
+            { "name": "join / resolve" },
+            { "name": "basename / dirname / extname" },
+            { "name": "path separators (cross-platform)" }
+          ]
+        },
+        {
+          "name": "http/https",
+          "children": [
+            { "name": "createServer" },
+            { "name": "request/response objects" },
+            { "name": "headers & status codes" },
+            { "name": "streaming responses" }
+          ]
+        },
+        {
+          "name": "url",
+          "children": [
+            { "name": "URL / URLSearchParams" },
+            { "name": "query parsing & encoding" }
+          ]
+        },
+        {
+          "name": "crypto",
+          "children": [
+            { "name": "hashing (sha256 etc.)" },
+            { "name": "HMAC" },
+            { "name": "randomBytes" },
+            { "name": "password hashing (bcrypt/argon2 concept)" }
+          ]
+        },
+        {
+          "name": "os",
+          "children": [
+            { "name": "cpu/memory info" },
+            { "name": "platform detection" }
+          ]
+        }
       ]
     },
     {
-      "name": "Streams",
+      "name": "Streams & Buffers",
       "children": [
-        { "name": "Readable" },
-        { "name": "Writable" },
-        { "name": "Transform" },
-        { "name": "pipeline" },
-        { "name": "backpressure" }
+        { "name": "Buffer (encoding, base64, UTF-8)" },
+        {
+          "name": "Stream Types",
+          "children": [
+            { "name": "Readable" },
+            { "name": "Writable" },
+            { "name": "Duplex" },
+            { "name": "Transform" }
+          ]
+        },
+        { "name": "pipe()" },
+        { "name": "pipeline()" },
+        { "name": "backpressure" },
+        { "name": "stream error handling" }
       ]
     },
     {
-      "name": "Networking",
+      "name": "Networking for Full-Stack",
       "children": [
-        { "name": "REST basics" },
-        { "name": "WebSockets" },
-        { "name": "CORS (concept)" },
-        { "name": "TLS basics" }
+        {
+          "name": "REST Fundamentals",
+          "children": [
+            { "name": "HTTP methods (GET/POST/PUT/PATCH/DELETE)" },
+            { "name": "status codes (2xx/4xx/5xx)" },
+            { "name": "request/response headers" },
+            { "name": "pagination & filtering" }
+          ]
+        },
+        {
+          "name": "CORS",
+          "children": [
+            { "name": "same-origin policy (why it exists)" },
+            { "name": "preflight OPTIONS" },
+            { "name": "credentials + cookies" }
+          ]
+        },
+        {
+          "name": "TLS Basics",
+          "children": [
+            { "name": "HTTPS concept" },
+            { "name": "certificates (what they prove)" },
+            { "name": "reverse proxy termination concept" }
+          ]
+        },
+        {
+          "name": "WebSockets",
+          "children": [
+            { "name": "ws basics" },
+            { "name": "Socket.io concept" },
+            { "name": "real-time events (chat, notifications)" }
+          ]
+        }
       ]
     },
     {
-      "name": "Express Ecosystem",
+      "name": "Express Ecosystem (API Layer)",
       "children": [
-        { "name": "Express routing" },
-        { "name": "middleware" },
-        { "name": "error handling" },
-        { "name": "validation" }
+        {
+          "name": "App Structure",
+          "children": [
+            { "name": "app vs router" },
+            { "name": "folder structure (routes/controllers/services)" },
+            { "name": "config management" }
+          ]
+        },
+        {
+          "name": "Routing",
+          "children": [
+            { "name": "route params" },
+            { "name": "query params" },
+            { "name": "request body parsing (express.json)" }
+          ]
+        },
+        {
+          "name": "Middleware",
+          "children": [
+            { "name": "middleware order" },
+            { "name": "auth middleware" },
+            { "name": "logging middleware" },
+            { "name": "static files" }
+          ]
+        },
+        {
+          "name": "Validation",
+          "children": [
+            { "name": "schema validation (zod/joi concept)" },
+            { "name": "sanitization" },
+            { "name": "consistent error responses" }
+          ]
+        },
+        {
+          "name": "Error Handling",
+          "children": [
+            { "name": "central error handler" },
+            { "name": "async errors pattern" },
+            { "name": "not found (404) handler" }
+          ]
+        }
       ]
     },
     {
-      "name": "Databases",
+      "name": "Databases (Full-Stack Focus)",
       "children": [
-        { "name": "PostgreSQL" },
-        { "name": "MongoDB" },
-        { "name": "ORMs (Prisma/Sequelize)" },
-        { "name": "migrations" }
+        {
+          "name": "SQL (PostgreSQL)",
+          "children": [
+            { "name": "connections & pooling" },
+            { "name": "CRUD + joins (concept)" },
+            { "name": "transactions (concept)" }
+          ]
+        },
+        {
+          "name": "NoSQL (MongoDB)",
+          "children": [
+            { "name": "documents & collections" },
+            { "name": "indexes concept" }
+          ]
+        },
+        {
+          "name": "ORM / Query Builders",
+          "children": [
+            { "name": "Prisma (schema, client, migrations)" },
+            { "name": "Sequelize (models, migrations)" },
+            { "name": "Knex (query builder concept)" }
+          ]
+        },
+        {
+          "name": "Migrations",
+          "children": [
+            { "name": "migration strategy" },
+            { "name": "seeding data" },
+            { "name": "rollback concept" }
+          ]
+        },
+        {
+          "name": "Caching",
+          "children": [
+            { "name": "Redis basics" },
+            { "name": "cache invalidation concept" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Auth & Sessions (Full-Stack)",
+      "children": [
+        {
+          "name": "Auth Models",
+          "children": [
+            { "name": "sessions vs JWT" },
+            { "name": "access token vs refresh token" }
+          ]
+        },
+        {
+          "name": "JWT",
+          "children": [
+            { "name": "sign/verify concept" },
+            { "name": "token expiration" },
+            { "name": "secure storage strategy (httpOnly cookies)" }
+          ]
+        },
+        {
+          "name": "Cookies & Sessions",
+          "children": [
+            { "name": "cookie flags (HttpOnly, Secure, SameSite)" },
+            { "name": "session stores (Redis concept)" }
+          ]
+        },
+        {
+          "name": "OAuth Basics",
+          "children": [
+            { "name": "authorization code flow (concept)" },
+            { "name": "social login concept" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Full-Stack Integration",
+      "children": [
+        {
+          "name": "Backend + Frontend",
+          "children": [
+            { "name": "API contracts (request/response shape)" },
+            { "name": "CORS + cookies end-to-end" },
+            { "name": "file uploads (multipart/form-data concept)" }
+          ]
+        },
+        {
+          "name": "SSR / Framework Integration",
+          "children": [
+            { "name": "Next.js API routes concept" },
+            { "name": "server actions concept (high level)" },
+            { "name": "BFF pattern (backend for frontend)" }
+          ]
+        },
+        {
+          "name": "Realtime UI",
+          "children": [
+            { "name": "WebSockets for notifications" },
+            { "name": "pub/sub concept" }
+          ]
+        }
       ]
     },
     {
       "name": "Testing",
       "children": [
-        { "name": "Jest" },
-        { "name": "Vitest" },
-        { "name": "Supertest" },
-        { "name": "mocks/stubs" }
+        {
+          "name": "Unit Testing",
+          "children": [
+            { "name": "Jest" },
+            { "name": "Vitest" },
+            { "name": "assertions" },
+            { "name": "mocks/stubs/spies" }
+          ]
+        },
+        {
+          "name": "API Testing",
+          "children": [
+            { "name": "Supertest" },
+            { "name": "test database strategy" }
+          ]
+        },
+        {
+          "name": "Integration & E2E Concepts",
+          "children": [
+            { "name": "test environment setup" },
+            { "name": "fixtures & seeding" }
+          ]
+        }
       ]
     },
     {
-      "name": "Tooling",
+      "name": "Tooling & Developer Experience",
       "children": [
-        { "name": "npm" },
-        { "name": "pnpm" },
-        { "name": "yarn" },
-        { "name": "eslint" },
-        { "name": "prettier" }
+        {
+          "name": "Package Managers",
+          "children": [
+            { "name": "npm" },
+            { "name": "pnpm" },
+            { "name": "yarn" }
+          ]
+        },
+        {
+          "name": "Linting & Formatting",
+          "children": [
+            { "name": "eslint" },
+            { "name": "prettier" },
+            { "name": "shared config strategy" }
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "children": [
+            { "name": "tsconfig basics" },
+            { "name": "types for Node (DefinitelyTyped)" },
+            { "name": "ESM vs CJS in TS projects" }
+          ]
+        },
+        {
+          "name": "Dev Servers",
+          "children": [
+            { "name": "nodemon" },
+            { "name": "ts-node / tsx" }
+          ]
+        }
       ]
     },
     {
-      "name": "Security",
+      "name": "Security (Full-Stack Essentials)",
       "children": [
-        { "name": "dependency audit" },
-        { "name": "secrets management" },
-        { "name": "OWASP basics" }
+        {
+          "name": "OWASP Basics",
+          "children": [
+            { "name": "injection (SQL/NoSQL) concept" },
+            { "name": "XSS concept" },
+            { "name": "CSRF concept" },
+            { "name": "broken auth concept" }
+          ]
+        },
+        {
+          "name": "API Hardening",
+          "children": [
+            { "name": "rate limiting" },
+            { "name": "Helmet (secure headers)" },
+            { "name": "input validation everywhere" },
+            { "name": "CORS configuration" }
+          ]
+        },
+        {
+          "name": "Secrets Management",
+          "children": [
+            { "name": ".env usage" },
+            { "name": "never commit secrets" },
+            { "name": "rotating keys concept" }
+          ]
+        },
+        {
+          "name": "Dependency Security",
+          "children": [
+            { "name": "npm audit" },
+            { "name": "Snyk concept" },
+            { "name": "supply chain awareness concept" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Performance & Observability",
+      "children": [
+        {
+          "name": "Performance",
+          "children": [
+            { "name": "avoid blocking the event loop" },
+            { "name": "caching strategy" },
+            { "name": "compression concept" }
+          ]
+        },
+        {
+          "name": "Debugging",
+          "children": [
+            { "name": "node --inspect" },
+            { "name": "Chrome DevTools for Node" },
+            { "name": "profiling basics (CPU/memory)" }
+          ]
+        },
+        {
+          "name": "Logging & Monitoring",
+          "children": [
+            { "name": "structured logging concept" },
+            { "name": "request IDs / correlation IDs" },
+            { "name": "health checks" }
+          ]
+        }
       ]
     },
     {
       "name": "Deployment",
       "children": [
-        { "name": "env vars" },
-        { "name": "Docker basics" },
-        { "name": "reverse proxy (Nginx)" },
-        { "name": "process managers (PM2)" }
+        {
+          "name": "Environment",
+          "children": [
+            { "name": "env vars" },
+            { "name": "config per environment (dev/staging/prod)" }
+          ]
+        },
+        {
+          "name": "Docker Basics",
+          "children": [
+            { "name": "Dockerfile concept" },
+            { "name": "multi-stage builds concept" }
+          ]
+        },
+        {
+          "name": "Process Management",
+          "children": [
+            { "name": "PM2" },
+            { "name": "graceful restart concept" }
+          ]
+        },
+        {
+          "name": "Reverse Proxy",
+          "children": [
+            { "name": "Nginx concept" },
+            { "name": "TLS termination concept" },
+            { "name": "static assets + caching headers concept" }
+          ]
+        },
+        {
+          "name": "Hosting Models",
+          "children": [
+            { "name": "traditional VPS" },
+            { "name": "serverless concept" },
+            { "name": "platform-as-a-service concept" }
+          ]
+        }
       ]
     }
   ]

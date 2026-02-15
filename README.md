@@ -1,33 +1,128 @@
-# Radial tree component
+# Knowledge Maps Radial Tree
 
-https://observablehq.com/d/608289addb874ed7@278
+Interactive radial tree visualizations for language learning roadmaps, rendered with D3.
 
-View this notebook in your browser by running a web server in this folder. For
-example:
+## Run locally
 
-~~~sh
+```sh
 npx http-server
-~~~
+```
 
-Or, use the [Observable Runtime](https://github.com/observablehq/runtime) to
-import this module directly into your application. To npm install:
+Then open `http://localhost:8080` (or the port shown by `http-server`).
 
-~~~sh
-npm install @observablehq/runtime@5
-npm install https://api.observablehq.com/d/608289addb874ed7@278.tgz?v=3
-~~~
+## Supported language maps
 
-Then, import your notebook and the runtime as:
+The app currently ships with:
 
-~~~js
-import {Runtime, Inspector} from "@observablehq/runtime";
-import define from "608289addb874ed7";
-~~~
+- Python (`data/python.json`)
+- Node.js (`data/node.json`)
+- Java (`data/java.json`)
+- JavaScript (`data/javascript.json`)
 
-To log the value of the cell named “foo”:
+You can switch maps via the topic buttons or by URL query param:
 
-~~~js
-const runtime = new Runtime();
-const main = runtime.module(define);
-main.value("foo").then(value => console.log(value));
-~~~
+- `?topic=python`
+- `?topic=node`
+- `?topic=java`
+- `?topic=javascript`
+
+---
+
+## JSON format used by maps
+
+Each map is a hierarchical JSON object using the same shape:
+
+```json
+{
+  "name": "Language Name",
+  "children": [
+    {
+      "name": "Category",
+      "children": [
+        { "name": "Topic" },
+        { "name": "Another Topic" }
+      ]
+    }
+  ]
+}
+```
+
+Rules:
+
+1. Root object has a `name` and optional `children`.
+2. Every node is `{ "name": string }`.
+3. Branch nodes include `children` as an array of nodes.
+4. Leaf nodes only need `name`.
+
+The rendering logic in `app.js` reads this hierarchy and builds a radial tree with `d3.hierarchy` + `d3.tree`, so all languages must keep this structure.
+
+---
+
+## How to add a new language map manually (developer guide)
+
+### 1) Create the JSON data file
+
+Create a new file under `data/`:
+
+- Example: `data/rust.json`
+
+Use the same hierarchical structure shown above. Keep naming concise and topic-focused.
+
+### 2) Register the language in `app.js`
+
+Open `app.js` and add a new entry in the `TOPICS` object:
+
+```js
+rust: {
+  label: "Rust",
+  jsonPath: "data/rust.json",
+  title: "Rust Knowledge Map",
+  description: "A Rust roadmap covering ownership, borrowing, lifetimes, traits, async, and tooling."
+}
+```
+
+What each field does:
+
+- `label`: button label in the UI.
+- `jsonPath`: data source loaded via `fetch`.
+- `title`: page `<title>` + on-page heading.
+- `description`: subtitle text shown under heading.
+
+### 3) (Optional) Set the new default language
+
+In `app.js`, update:
+
+```js
+const DEFAULT_TOPIC = "python";
+```
+
+Replace with your new topic key if you want the app to open there by default.
+
+### 4) Verify in browser
+
+Run `npx http-server` and open:
+
+- `http://localhost:8080/?topic=rust`
+
+Confirm:
+
+- The new button appears.
+- The title/description updates.
+- The radial tree renders without errors.
+
+### 5) Commit both code + data changes
+
+For a new language, the minimum expected files changed are:
+
+- `data/<language>.json`
+- `app.js`
+- `README.md` (update supported languages + instructions)
+
+---
+
+## Implementation notes
+
+- Rendering happens in `Tree(...)` within `app.js`.
+- Topic selection is URL-driven (`topic` query param).
+- Failed JSON loads are handled with a user-facing error message.
+- No schema transformation step exists; JSON shape is consumed directly.

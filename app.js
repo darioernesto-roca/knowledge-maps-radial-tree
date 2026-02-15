@@ -21,6 +21,13 @@ const TOPICS = {
     title: "Java Knowledge Map",
     description:
       "A Java topic map spanning JVM foundations, object-oriented design, collections, exceptions, modern Java features, build tooling, and enterprise development."
+  },
+  javascript: {
+    label: "JavaScript",
+    jsonPath: "data/javascript.json",
+    title: "JavaScript Knowledge Map",
+    description:
+      "A JavaScript learning map covering language fundamentals, asynchronous patterns, DOM APIs, modules, tooling, and security/performance best practices."
   }
 };
 

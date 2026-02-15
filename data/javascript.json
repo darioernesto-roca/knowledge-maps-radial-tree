@@ -1,0 +1,177 @@
+{
+  "name": "JavaScript",
+  "children": [
+    {
+      "name": "Fundamentals",
+      "children": [
+        { "name": "ECMAScript and runtime environments" },
+        { "name": "Values vs references" },
+        { "name": "Primitive types" },
+        { "name": "Dynamic typing" },
+        { "name": "Strict mode" },
+        { "name": "Expressions and statements" }
+      ]
+    },
+    {
+      "name": "Syntax & Operators",
+      "children": [
+        { "name": "let / const / var" },
+        { "name": "Scope and hoisting" },
+        { "name": "Template literals" },
+        { "name": "Destructuring" },
+        { "name": "Spread and rest" },
+        { "name": "Optional chaining (?.)" },
+        { "name": "Nullish coalescing (??)" },
+        { "name": "Ternary operator" },
+        { "name": "Equality (== vs ===)" }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "children": [
+        { "name": "if / else" },
+        { "name": "switch" },
+        { "name": "for / while / do...while" },
+        { "name": "for...of and for...in" },
+        { "name": "break / continue" },
+        { "name": "try / catch / finally" },
+        { "name": "throw and custom errors" }
+      ]
+    },
+    {
+      "name": "Functions",
+      "children": [
+        { "name": "Function declarations and expressions" },
+        { "name": "Arrow functions" },
+        { "name": "Parameters and defaults" },
+        { "name": "Return values" },
+        { "name": "Closures" },
+        { "name": "Higher-order functions" },
+        { "name": "Callbacks" },
+        { "name": "Recursion" },
+        { "name": "this binding (call/apply/bind)" }
+      ]
+    },
+    {
+      "name": "Collections",
+      "children": [
+        {
+          "name": "Arrays",
+          "children": [
+            { "name": "map / filter / reduce" },
+            { "name": "find / some / every" },
+            { "name": "slice / splice / concat" },
+            { "name": "sort and compare functions" }
+          ]
+        },
+        {
+          "name": "Objects",
+          "children": [
+            { "name": "Property access" },
+            { "name": "Object.keys / values / entries" },
+            { "name": "Computed properties" },
+            { "name": "Shallow copy pitfalls" }
+          ]
+        },
+        {
+          "name": "Map and Set",
+          "children": [
+            { "name": "Unique values with Set" },
+            { "name": "Key-value mapping with Map" },
+            { "name": "WeakMap / WeakSet concept" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Object-Oriented JavaScript",
+      "children": [
+        { "name": "Prototype chain" },
+        { "name": "Constructor functions" },
+        { "name": "class syntax" },
+        { "name": "instanceof" },
+        { "name": "Inheritance with extends" },
+        { "name": "Static methods" },
+        { "name": "Private fields (#)" }
+      ]
+    },
+    {
+      "name": "Asynchronous JavaScript",
+      "children": [
+        { "name": "Event loop" },
+        { "name": "Call stack and task queues" },
+        { "name": "setTimeout / setInterval" },
+        { "name": "Promises" },
+        { "name": "async / await" },
+        { "name": "Error handling in async code" },
+        { "name": "AbortController and cancellation" }
+      ]
+    },
+    {
+      "name": "Modules & Tooling",
+      "children": [
+        { "name": "ES Modules (import/export)" },
+        { "name": "CommonJS basics" },
+        { "name": "npm scripts" },
+        { "name": "package.json essentials" },
+        { "name": "Semantic versioning" },
+        { "name": "Bundlers (Vite/Webpack concept)" },
+        { "name": "Transpilation (Babel concept)" }
+      ]
+    },
+    {
+      "name": "Browser APIs",
+      "children": [
+        {
+          "name": "DOM",
+          "children": [
+            { "name": "Querying elements" },
+            { "name": "Create / append / remove nodes" },
+            { "name": "classList and attributes" },
+            { "name": "Event listeners" },
+            { "name": "Event propagation" }
+          ]
+        },
+        {
+          "name": "Network",
+          "children": [
+            { "name": "fetch API" },
+            { "name": "HTTP methods" },
+            { "name": "Request / response lifecycle" },
+            { "name": "JSON parsing and serialization" }
+          ]
+        },
+        {
+          "name": "Storage",
+          "children": [
+            { "name": "localStorage / sessionStorage" },
+            { "name": "Cookies basics" },
+            { "name": "IndexedDB concept" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Testing & Quality",
+      "children": [
+        { "name": "Unit testing concepts" },
+        { "name": "Jest / Vitest basics" },
+        { "name": "Linting with ESLint" },
+        { "name": "Formatting with Prettier" },
+        { "name": "Debugging with browser devtools" },
+        { "name": "Source maps concept" }
+      ]
+    },
+    {
+      "name": "Security & Performance",
+      "children": [
+        { "name": "XSS and DOM sanitization" },
+        { "name": "CSRF awareness" },
+        { "name": "Dependency hygiene and audits" },
+        { "name": "Memory leaks (event listeners / closures)" },
+        { "name": "Debounce / throttle" },
+        { "name": "Code splitting and lazy loading" }
+      ]
+    }
+  ]
+}

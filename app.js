@@ -33,6 +33,52 @@ const TOPICS = {
 
 const DEFAULT_TOPIC = "python";
 
+const THEME_STORAGE_KEY = "knowledge-map-theme";
+let currentTopic = null;
+
+function getCssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
+function getPreferredTheme() {
+  const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+  if (savedTheme === "dark" || savedTheme === "light") {
+    return savedTheme;
+  }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  const nextTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", nextTheme);
+
+  const toggle = document.getElementById("theme-toggle");
+  if (toggle) {
+    const isDark = nextTheme === "dark";
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+    toggle.textContent = isDark ? "Light mode" : "Dark mode";
+  }
+}
+
+function initializeTheme() {
+  applyTheme(getPreferredTheme());
+
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) return;
+
+  toggle.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    if (currentTopic) {
+      render(currentTopic);
+    }
+  });
+}
+
+
 function getTopicFromURL() {
   const topic = new URLSearchParams(window.location.search).get("topic");
   return topic && TOPICS[topic] ? topic : DEFAULT_TOPIC;
@@ -90,7 +136,8 @@ function Tree(data, {
   fill = "#999",
   r = 3,
   halo = "#fff",
-  haloWidth = 3
+  haloWidth = 3,
+  textFill = "currentColor"
 } = {}) {
   const radius = Math.min(width - margin * 2, height - margin * 2) / 2;
   const root = d3.hierarchy(data);
@@ -142,6 +189,7 @@ function Tree(data, {
       .attr("paint-order", "stroke")
       .attr("stroke", halo)
       .attr("stroke-width", haloWidth)
+      .attr("fill", textFill)
       .text((d, i) => labels[i]);
   }
 
@@ -151,6 +199,7 @@ function Tree(data, {
 async function render(topic) {
   const normalizedTopic = TOPICS[topic] ? topic : DEFAULT_TOPIC;
   const config = TOPICS[normalizedTopic];
+  currentTopic = normalizedTopic;
 
   renderTopicContent(normalizedTopic);
   renderButtons(normalizedTopic);
@@ -169,7 +218,11 @@ async function render(topic) {
       title: (d, node) => node.ancestors().reverse().map((ancestor) => ancestor.data.name).join(" > "),
       width: 1152,
       height: 1152,
-      margin: 100
+      margin: 100,
+      stroke: getCssVar("--tree-stroke"),
+      fill: getCssVar("--tree-fill"),
+      halo: getCssVar("--tree-halo"),
+      textFill: getCssVar("--tree-label")
     });
 
     const container = document.getElementById("chart-container");
@@ -181,4 +234,5 @@ async function render(topic) {
   }
 }
 
+initializeTheme();
 render(getTopicFromURL());

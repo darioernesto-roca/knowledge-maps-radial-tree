@@ -1,0 +1,992 @@
+{
+  "name": "JavaScript",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  "children": [
+    {
+      "name": "Fundamentals",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      "children": [
+        {
+          "name": "ECMAScript vs runtime environments (browser/Node/Deno)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview"
+        },
+        {
+          "name": "Values vs references",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+        },
+        {
+          "name": "Primitive types (string, number, boolean, null, undefined, symbol, bigint)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+        },
+        {
+          "name": "Reference types (object, array, function)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+        },
+        {
+          "name": "Dynamic typing",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+        },
+        {
+          "name": "Type coercion (implicit/explicit)",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion"
+        },
+        {
+          "name": "Strict mode",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode"
+        },
+        {
+          "name": "Expressions vs statements",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators"
+        },
+        {
+          "name": "Truthy / falsy",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Truthy"
+        },
+        {
+          "name": "NaN and Infinity",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"
+        },
+        {
+          "name": "Memory model (stack vs heap concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_management"
+        }
+      ]
+    },
+    {
+      "name": "Syntax",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
+      "children": [
+        {
+          "name": "Variables",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements",
+          "children": [
+            {
+              "name": "var (legacy)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"
+            },
+            {
+              "name": "let",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"
+            },
+            {
+              "name": "const",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"
+            },
+            {
+              "name": "scope (block/function/global)",
+              "url": "https://developer.mozilla.org/en-US/docs/Glossary/Scope"
+            },
+            {
+              "name": "hoisting",
+              "url": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"
+            },
+            {
+              "name": "temporal dead zone (TDZ)",
+              "url": "https://developer.mozilla.org/en-US/docs/Glossary/Temporal_Dead_Zone"
+            }
+          ]
+        },
+        {
+          "name": "Operators",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators",
+          "children": [
+            {
+              "name": "arithmetic operators",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators"
+            },
+            {
+              "name": "comparison operators",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators"
+            },
+            {
+              "name": "logical operators",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators"
+            },
+            {
+              "name": "bitwise operators",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators"
+            },
+            {
+              "name": "ternary operator",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
+            },
+            {
+              "name": "optional chaining (?.)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining"
+            },
+            {
+              "name": "nullish coalescing (??)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
+            },
+            {
+              "name": "spread operator (...)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+            },
+            {
+              "name": "rest operator (...)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
+            },
+            {
+              "name": "comma operator (rare)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator"
+            },
+            {
+              "name": "equality (== vs ===)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+            }
+          ]
+        },
+        {
+          "name": "Destructuring",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment",
+          "children": [
+            {
+              "name": "object destructuring",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+            },
+            {
+              "name": "array destructuring",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+            },
+            {
+              "name": "default values",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+            },
+            {
+              "name": "renaming variables",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+            },
+            {
+              "name": "nested destructuring",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+            }
+          ]
+        },
+        {
+          "name": "Template literals",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+          "children": [
+            {
+              "name": "interpolation (${...})",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+            },
+            {
+              "name": "multiline strings",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+            },
+            {
+              "name": "tagged templates (advanced)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements",
+      "children": [
+        {
+          "name": "if / else",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"
+        },
+        {
+          "name": "switch",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch"
+        },
+        {
+          "name": "for loop",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for"
+        },
+        {
+          "name": "while loop",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while"
+        },
+        {
+          "name": "do...while loop",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while"
+        },
+        {
+          "name": "for...in",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"
+        },
+        {
+          "name": "for...of",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"
+        },
+        {
+          "name": "break / continue",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break"
+        },
+        {
+          "name": "try / catch / finally",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"
+        },
+        {
+          "name": "throw",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw"
+        },
+        {
+          "name": "Error objects (Error, TypeError, RangeError)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"
+        }
+      ]
+    },
+    {
+      "name": "Functions",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+      "children": [
+        {
+          "name": "function declaration",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function"
+        },
+        {
+          "name": "function expression",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function"
+        },
+        {
+          "name": "arrow functions",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
+        },
+        {
+          "name": "default parameters",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters"
+        },
+        {
+          "name": "rest parameters",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
+        },
+        {
+          "name": "return values",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return"
+        },
+        {
+          "name": "callback functions",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Callback_function"
+        },
+        {
+          "name": "higher-order functions",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Higher-order_function"
+        },
+        {
+          "name": "closures",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Closure"
+        },
+        {
+          "name": "recursion",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Recursion"
+        },
+        {
+          "name": "IIFE",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/IIFE"
+        },
+        {
+          "name": "this",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this",
+          "children": [
+            {
+              "name": "this binding rules",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"
+            },
+            {
+              "name": "call()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"
+            },
+            {
+              "name": "apply()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
+            },
+            {
+              "name": "bind()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"
+            },
+            {
+              "name": "arrow functions and lexical this",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strings",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+      "children": [
+        {
+          "name": "character access",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+        },
+        {
+          "name": "template strings",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+        },
+        {
+          "name": "escape characters",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences"
+        },
+        {
+          "name": "length",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length"
+        },
+        {
+          "name": "includes()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes"
+        },
+        {
+          "name": "startsWith()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith"
+        },
+        {
+          "name": "endsWith()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith"
+        },
+        {
+          "name": "indexOf() / lastIndexOf()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf"
+        },
+        {
+          "name": "slice() / substring()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice"
+        },
+        {
+          "name": "replace() / replaceAll()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
+        },
+        {
+          "name": "split()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split"
+        },
+        {
+          "name": "toLowerCase() / toUpperCase()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase"
+        },
+        {
+          "name": "trim() / trimStart() / trimEnd()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim"
+        }
+      ]
+    },
+    {
+      "name": "Number",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+      "children": [
+        {
+          "name": "Number()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number"
+        },
+        {
+          "name": "parseInt()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt"
+        },
+        {
+          "name": "parseFloat()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat"
+        },
+        {
+          "name": "toFixed()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed"
+        },
+        {
+          "name": "toPrecision()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision"
+        },
+        {
+          "name": "Math (random, floor, ceil, round)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"
+        },
+        {
+          "name": "NaN handling (Number.isNaN)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN"
+        },
+        {
+          "name": "BigInt (concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt"
+        }
+      ]
+    },
+    {
+      "name": "Arrays",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+      "children": [
+        {
+          "name": "push() / pop()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+        },
+        {
+          "name": "shift() / unshift()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+        },
+        {
+          "name": "slice() / splice()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
+        },
+        {
+          "name": "concat()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"
+        },
+        {
+          "name": "includes()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"
+        },
+        {
+          "name": "indexOf() / findIndex()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
+        },
+        {
+          "name": "find()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find"
+        },
+        {
+          "name": "some()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some"
+        },
+        {
+          "name": "every()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"
+        },
+        {
+          "name": "map()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+        },
+        {
+          "name": "filter()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+        },
+        {
+          "name": "reduce()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"
+        },
+        {
+          "name": "sort() (compare function)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+        },
+        {
+          "name": "flat() / flatMap()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat"
+        },
+        {
+          "name": "Array.from()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"
+        },
+        {
+          "name": "Array.isArray()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"
+        }
+      ]
+    },
+    {
+      "name": "Objects",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+      "children": [
+        {
+          "name": "property access (dot vs bracket)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"
+        },
+        {
+          "name": "dynamic property names",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names"
+        },
+        {
+          "name": "computed properties",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names"
+        },
+        {
+          "name": "Object.keys()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
+        },
+        {
+          "name": "Object.values()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values"
+        },
+        {
+          "name": "Object.entries()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"
+        },
+        {
+          "name": "Object.assign()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"
+        },
+        {
+          "name": "spread copy ({...obj})",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+        },
+        {
+          "name": "shallow copy pitfalls",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy"
+        },
+        {
+          "name": "destructuring",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+        },
+        {
+          "name": "Object.freeze() / Object.seal()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze"
+        },
+        {
+          "name": "prototype chain (concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+        }
+      ]
+    },
+    {
+      "name": "Classes",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+      "children": [
+        {
+          "name": "class keyword",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
+        },
+        {
+          "name": "constructor",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor"
+        },
+        {
+          "name": "instance methods",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
+        },
+        {
+          "name": "static methods",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static"
+        },
+        {
+          "name": "getters / setters",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get"
+        },
+        {
+          "name": "private fields (#)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields"
+        },
+        {
+          "name": "Inheritance",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends",
+          "children": [
+            {
+              "name": "extends",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends"
+            },
+            {
+              "name": "super()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super"
+            },
+            {
+              "name": "prototype inheritance",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+            },
+            {
+              "name": "subclassing built-ins (advanced)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends#extending_built-ins"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Promises",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+      "children": [
+        {
+          "name": "promise states (pending/fulfilled/rejected)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+        },
+        {
+          "name": "new Promise",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise"
+        },
+        {
+          "name": "then()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"
+        },
+        {
+          "name": "catch()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch"
+        },
+        {
+          "name": "finally()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally"
+        },
+        {
+          "name": "async / await",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"
+        },
+        {
+          "name": "Promise.resolve()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve"
+        },
+        {
+          "name": "Promise.reject()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject"
+        },
+        {
+          "name": "Promise.all()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all"
+        },
+        {
+          "name": "Promise.race()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race"
+        },
+        {
+          "name": "Promise.any()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"
+        },
+        {
+          "name": "Promise.allSettled()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"
+        },
+        {
+          "name": "top-level await (ESM)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await"
+        }
+      ]
+    },
+    {
+      "name": "Modules",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+      "children": [
+        {
+          "name": "script type=module",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#applying_the_module_to_your_html"
+        },
+        {
+          "name": "import",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"
+        },
+        {
+          "name": "export",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export"
+        },
+        {
+          "name": "default export",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export"
+        },
+        {
+          "name": "named exports",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export#using_named_exports"
+        },
+        {
+          "name": "dynamic import()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import"
+        },
+        {
+          "name": "CommonJS require/module.exports (Node concept)",
+          "url": "https://nodejs.org/api/modules.html"
+        },
+        {
+          "name": "npm basics (package.json concept)",
+          "url": "https://docs.npmjs.com/cli/v10/configuring-npm/package-json"
+        },
+        {
+          "name": "bundlers concept (Vite/Webpack)",
+          "url": "https://vitejs.dev/guide/"
+        }
+      ]
+    },
+    {
+      "name": "DOM",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+      "children": [
+        {
+          "name": "Selection",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document",
+          "children": [
+            {
+              "name": "document",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document"
+            },
+            {
+              "name": "document.body",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/body"
+            },
+            {
+              "name": "document.documentElement",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement"
+            },
+            {
+              "name": "document.getElementById()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+            },
+            {
+              "name": "document.getElementsByClassName()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName"
+            },
+            {
+              "name": "document.getElementsByTagName()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName"
+            },
+            {
+              "name": "document.querySelector()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+            },
+            {
+              "name": "document.querySelectorAll()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+            },
+            {
+              "name": "element.closest()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/closest"
+            },
+            {
+              "name": "NodeList",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList"
+            },
+            {
+              "name": "NodeList to Array",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList"
+            }
+          ]
+        },
+        {
+          "name": "HTML Element",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement",
+          "children": [
+            {
+              "name": "classList.add()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/add"
+            },
+            {
+              "name": "classList.remove()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/remove"
+            },
+            {
+              "name": "classList.contains()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains"
+            },
+            {
+              "name": "classList.replace()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/replace"
+            },
+            {
+              "name": "classList.toggle()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle"
+            },
+            {
+              "name": "dataset",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"
+            },
+            {
+              "name": "getAttribute()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute"
+            },
+            {
+              "name": "setAttribute()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute"
+            },
+            {
+              "name": "style",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style"
+            },
+            {
+              "name": "textContent",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"
+            },
+            {
+              "name": "value",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/value"
+            },
+            {
+              "name": "innerHTML",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"
+            },
+            {
+              "name": "insertAdjacentHTML()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML"
+            },
+            {
+              "name": "appendChild()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+            },
+            {
+              "name": "remove()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/remove"
+            },
+            {
+              "name": "removeAttribute()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute"
+            },
+            {
+              "name": "parentElement",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement"
+            },
+            {
+              "name": "document.createElement()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+            },
+            {
+              "name": "document.appendChild()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+            }
+          ]
+        },
+        {
+          "name": "Events",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+          "children": [
+            {
+              "name": "event details",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event"
+            },
+            {
+              "name": "event.target",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/target"
+            },
+            {
+              "name": "event.currentTarget",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget"
+            },
+            {
+              "name": "event.preventDefault()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"
+            },
+            {
+              "name": "event propagation",
+              "url": "https://developer.mozilla.org/en-US/docs/Glossary/Event_propagation"
+            },
+            {
+              "name": "DOM content loaded",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event"
+            },
+            {
+              "name": "event bubbling and propagation",
+              "url": "https://developer.mozilla.org/en-US/docs/Glossary/Event_bubbling"
+            },
+            {
+              "name": "element.addEventListener()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+            },
+            {
+              "name": "element.removeEventListener()",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener"
+            },
+            {
+              "name": "click",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event"
+            },
+            {
+              "name": "submit",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event"
+            },
+            {
+              "name": "keydown / keyup",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event"
+            },
+            {
+              "name": "focus / blur",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event"
+            },
+            {
+              "name": "scroll",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fetch API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+      "children": [
+        {
+          "name": "fetch()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/fetch"
+        },
+        {
+          "name": "Response status codes",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+        },
+        {
+          "name": "Response.json()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Response/json"
+        },
+        {
+          "name": "Error handling",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
+        },
+        {
+          "name": "GET",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET"
+        },
+        {
+          "name": "POST",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST"
+        },
+        {
+          "name": "PUT",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT"
+        },
+        {
+          "name": "PATCH",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH"
+        },
+        {
+          "name": "DELETE",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE"
+        },
+        {
+          "name": "headers",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Headers"
+        },
+        {
+          "name": "body (JSON.stringify)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
+        },
+        {
+          "name": "JSON.parse()",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"
+        },
+        {
+          "name": "AbortController (cancellation)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController"
+        }
+      ]
+    },
+    {
+      "name": "Misc",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "children": [
+        {
+          "name": "typeof operator",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+        },
+        {
+          "name": "Strict Mode details",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode"
+        },
+        {
+          "name": "immutability (concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Immutable"
+        },
+        {
+          "name": "pure functions (concept)",
+          "url": "https://example-javascript.com"
+        },
+        {
+          "name": "functional programming basics (concept)",
+          "url": "https://example-javascript.com"
+        },
+        {
+          "name": "currying (concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Currying"
+        },
+        {
+          "name": "event delegation (concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling#event_delegation"
+        },
+        {
+          "name": "debounce / throttle (concept)",
+          "url": "https://example-javascript.com"
+        },
+        {
+          "name": "JSON (serialize/deserialize)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"
+        },
+        {
+          "name": "Date basics (concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+        },
+        {
+          "name": "Intl (i18n basics concept)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1470 @@
+{
+  "name": "Java",
+  "url": "https://docs.oracle.com/en/java/javase/21/",
+  "resources": [
+    {
+      "label": "Java SE Docs",
+      "url": "https://docs.oracle.com/en/java/javase/21/"
+    },
+    {
+      "label": "Dev.java",
+      "url": "https://dev.java/"
+    }
+  ],
+  "children": [
+    {
+      "name": "Fundamentals",
+      "url": "https://dev.java/learn/",
+      "resources": [
+        {
+          "label": "Dev.java Learn",
+          "url": "https://dev.java/learn/"
+        }
+      ],
+      "children": [
+        {
+          "name": "JDK vs JRE vs JVM",
+          "url": "https://dev.java/learn/jvm/",
+          "resources": [
+            {
+              "label": "Dev.java: JVM overview",
+              "url": "https://dev.java/learn/jvm/"
+            },
+            {
+              "label": "Java Tool Reference (java launcher)",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html"
+            }
+          ]
+        },
+        {
+          "name": "compile vs run",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-12.html",
+          "resources": [
+            {
+              "label": "JLS: Execution",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-12.html"
+            }
+          ]
+        },
+        {
+          "name": "bytecode",
+          "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/",
+          "resources": [
+            {
+              "label": "JVM Spec",
+              "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/"
+            }
+          ]
+        },
+        {
+          "name": "classpath",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html#class-path",
+          "resources": [
+            {
+              "label": "java command: class path",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html#class-path"
+            }
+          ]
+        },
+        {
+          "name": "Entry Point",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-12.html#jls-12.1.4",
+          "resources": [
+            {
+              "label": "JLS: Program execution and main method",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-12.html#jls-12.1.4"
+            }
+          ],
+          "children": [
+            {
+              "name": "public static void main(String[] args)",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-12.html#jls-12.1.4",
+              "resources": [
+                {
+                  "label": "JLS: main method",
+                  "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-12.html#jls-12.1.4"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "command line arguments",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html#synopsis",
+              "resources": [
+                {
+                  "label": "java command synopsis",
+                  "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html#synopsis"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "JAR execution",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html#jar-files",
+              "resources": [
+                {
+                  "label": "java command: JAR files",
+                  "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html#jar-files"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Packages & Imports",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html",
+          "resources": [
+            {
+              "label": "JLS: Packages and modules",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html"
+            }
+          ],
+          "children": [
+            {
+              "name": "package declaration",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.4",
+              "resources": [
+                {
+                  "label": "JLS: Package declarations",
+                  "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.4"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "import statement",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.5",
+              "resources": [
+                {
+                  "label": "JLS: Import declarations",
+                  "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.5"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "static import",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.5.3",
+              "resources": [
+                {
+                  "label": "JLS: Single-static-import & static-import",
+                  "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.5.3"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "package naming conventions",
+              "url": "https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html",
+              "resources": [
+                {
+                  "label": "Oracle tutorial: naming packages",
+                  "url": "https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Syntax & Types",
+      "url": "https://docs.oracle.com/javase/specs/jls/se21/html/",
+      "resources": [
+        {
+          "label": "Java Language Specification",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/"
+        }
+      ],
+      "children": [
+        {
+          "name": "Primitive Types",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2",
+          "resources": [
+            {
+              "label": "JLS: Primitive types and values",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2"
+            }
+          ],
+          "children": [
+            {
+              "name": "byte",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "short",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "int",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "long",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "float",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.3",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "double",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.3",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "char",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.2",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "boolean",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2.5",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Reference Types",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.3",
+          "resources": [
+            {
+              "label": "JLS: Reference types and values",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.3"
+            }
+          ],
+          "children": [
+            {
+              "name": "classes",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "interfaces",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-9.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "arrays",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-10.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "enums",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.9",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "records",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Wrapper Classes",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/package-summary.html",
+          "resources": [
+            {
+              "label": "java.lang package",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/package-summary.html"
+            }
+          ],
+          "children": [
+            {
+              "name": "Integer",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Long",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Long.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Double",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Boolean",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Boolean.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Character",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Character.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "autoboxing",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html#jls-5.1.7",
+              "resources": [
+                {
+                  "label": "JLS: Boxing conversion",
+                  "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html#jls-5.1.7"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "unboxing",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html#jls-5.1.8",
+              "resources": [
+                {
+                  "label": "JLS: Unboxing conversion",
+                  "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html#jls-5.1.8"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Variables",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.12",
+          "resources": [
+            {
+              "label": "JLS: Variables",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.12"
+            }
+          ],
+          "children": [
+            {
+              "name": "local variables",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.4",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "instance variables",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.3",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "static variables",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.3.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "final constants",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.12.4",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "var (local inference)",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.4",
+              "resources": [
+                {
+                  "label": "JLS: Local variable declarations",
+                  "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.4"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "scope",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-6.html#jls-6.3",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "shadowing",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-6.html#jls-6.4.1",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Operators",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html",
+          "resources": [
+            {
+              "label": "JLS: Expressions",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html"
+            }
+          ],
+          "children": [
+            {
+              "name": "arithmetic",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.17",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "comparison",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.20",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "logical",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.23",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "bitwise",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.22",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "assignment",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.26",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "ternary operator",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.25",
+              "resources": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html",
+      "resources": [
+        {
+          "label": "JLS: Blocks and statements",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "Conditionals",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.9",
+          "resources": [],
+          "children": [
+            {
+              "name": "if",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.9",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "if-else",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.9",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "switch statement",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.11",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "switch expressions (Java 14+)",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.28",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "pattern matching (Java 17+)",
+              "url": "https://dev.java/learn/pattern-matching/",
+              "resources": [
+                {
+                  "label": "Dev.java: Pattern matching",
+                  "url": "https://dev.java/learn/pattern-matching/"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Loops",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.14",
+          "resources": [],
+          "children": [
+            {
+              "name": "for",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.14.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "enhanced for-each",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.14.2",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "while",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.12",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "do-while",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.13",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "break",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.15",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "continue",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.16",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "labeled break",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.7",
+              "resources": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OOP",
+      "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html",
+      "resources": [
+        {
+          "label": "JLS: Classes",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "Classes & Objects",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html",
+          "resources": [],
+          "children": [
+            {
+              "name": "fields",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.3",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "methods",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.4",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "constructors",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.8",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "method overloading",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.4.9",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "access modifiers",
+              "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html",
+              "resources": [
+                {
+                  "label": "Oracle tutorial: Access control",
+                  "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "encapsulation",
+          "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "inheritance",
+          "url": "https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html",
+          "resources": [
+            {
+              "label": "Oracle tutorial: Inheritance",
+              "url": "https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html"
+            }
+          ],
+          "children": [
+            {
+              "name": "extends",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.1.4",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "super",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.8.7.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "method overriding",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.4.8.1",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "final methods",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.4.3.3",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "polymorphism",
+          "url": "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html",
+          "resources": [
+            {
+              "label": "Oracle tutorial: Polymorphism",
+              "url": "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html"
+            }
+          ],
+          "children": [
+            {
+              "name": "compile-time polymorphism",
+              "url": "https://example-java.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "runtime polymorphism",
+              "url": "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "upcasting",
+              "url": "https://example-java.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "downcasting",
+              "url": "https://example-java.com",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "interfaces",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-9.html",
+          "resources": [
+            {
+              "label": "JLS: Interfaces",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-9.html"
+            }
+          ],
+          "children": [
+            {
+              "name": "implements",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.1.5",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "default methods",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/package-summary.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "static methods",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-9.html#jls-9.4.3",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "functional interfaces",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/FunctionalInterface.html",
+              "resources": [
+                {
+                  "label": "@FunctionalInterface",
+                  "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/FunctionalInterface.html"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "abstract classes",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.1.1.1",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "records",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "enums",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.9",
+          "resources": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Collections",
+      "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/package-summary.html",
+      "resources": [
+        {
+          "label": "java.util package",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/package-summary.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "Core Interfaces",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html",
+          "resources": [],
+          "children": [
+            {
+              "name": "Collection",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "List",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Set",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Queue",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Queue.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Map",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Implementations",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/package-summary.html",
+          "resources": [],
+          "children": [
+            {
+              "name": "ArrayList",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "LinkedList",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/LinkedList.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "HashSet",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashSet.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "TreeSet",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/TreeSet.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "HashMap",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "TreeMap",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/TreeMap.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "LinkedHashMap",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/LinkedHashMap.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "PriorityQueue",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/PriorityQueue.html",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Iterator",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Iterator.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Comparator",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Comparable",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html",
+          "resources": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Exceptions",
+      "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-11.html",
+      "resources": [
+        {
+          "label": "JLS: Exceptions",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-11.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "try/catch/finally",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.20",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "throw / throws",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.18",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "checked vs unchecked",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-11.html#jls-11.1.1",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "custom exceptions",
+          "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/creating.html",
+          "resources": [
+            {
+              "label": "Oracle tutorial: Creating exceptions",
+              "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/creating.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "try-with-resources",
+          "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html",
+          "resources": [
+            {
+              "label": "Oracle tutorial: try-with-resources",
+              "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Generics",
+      "url": "https://docs.oracle.com/javase/tutorial/java/generics/",
+      "resources": [
+        {
+          "label": "Oracle tutorial: Generics",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/"
+        }
+      ],
+      "children": [
+        {
+          "name": "type parameters",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/types.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "generic classes",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/types.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "generic methods",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/methods.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "wildcards",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/wildcards.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "? extends",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/upperBounded.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "? super",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/lowerBounded.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "type erasure",
+          "url": "https://docs.oracle.com/javase/tutorial/java/generics/erasure.html",
+          "resources": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Functional Java",
+      "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html",
+      "resources": [
+        {
+          "label": "java.util.function package",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "lambdas",
+          "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html",
+          "resources": [
+            {
+              "label": "Oracle tutorial: Lambda expressions",
+              "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "method references",
+          "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html",
+          "resources": [
+            {
+              "label": "Oracle tutorial: Method references",
+              "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Streams API",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html",
+          "resources": [
+            {
+              "label": "java.util.stream package",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html"
+            }
+          ],
+          "children": [
+            {
+              "name": "map",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html#map(java.util.function.Function)",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "filter",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html#filter(java.util.function.Predicate)",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "flatMap",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html#flatMap(java.util.function.Function)",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "reduce",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html#reduce(java.util.function.BinaryOperator)",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "collect",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html#collect(java.util.stream.Collector)",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "parallel streams",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html#Parallelism",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Functional Interfaces",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html",
+          "resources": [],
+          "children": [
+            {
+              "name": "Predicate",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Predicate.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Function",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Consumer",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Consumer.html",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Supplier",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Supplier.html",
+              "resources": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Optional",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html",
+          "resources": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "I/O & NIO",
+      "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/package-summary.html",
+      "resources": [
+        {
+          "label": "java.io package",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/package-summary.html"
+        },
+        {
+          "label": "java.nio.file package",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/package-summary.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "File",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Files",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Files.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Path",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "BufferedReader/Writer",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedReader.html",
+          "resources": [
+            {
+              "label": "BufferedReader",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedReader.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "buffers",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/Buffer.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "channels",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/package-summary.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "serialization",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/serialization/index.html",
+          "resources": [
+            {
+              "label": "Serialization Spec",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/serialization/index.html"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Concurrency",
+      "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html",
+      "resources": [
+        {
+          "label": "java.util.concurrent package",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "Thread",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Runnable",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Runnable.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Callable",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Callable.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Executors",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executors.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "synchronization",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html",
+          "resources": [
+            {
+              "label": "JLS: Threads and locks",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "ReentrantLock",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/ReentrantLock.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "CompletableFuture",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CompletableFuture.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "ForkJoinPool",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ForkJoinPool.html",
+          "resources": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "JVM Internals",
+      "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/",
+      "resources": [
+        {
+          "label": "JVM Spec",
+          "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/"
+        }
+      ],
+      "children": [
+        {
+          "name": "heap",
+          "url": "https://dev.java/learn/jvm/garbage-collection/",
+          "resources": [
+            {
+              "label": "Dev.java: Garbage Collection",
+              "url": "https://dev.java/learn/jvm/garbage-collection/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "stack",
+          "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-2.html#jvms-2.5.2",
+          "resources": [
+            {
+              "label": "JVM Spec: Java Virtual Machine Stacks",
+              "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-2.html#jvms-2.5.2"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "metaspace",
+          "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-2.html#jvms-2.5.4",
+          "resources": [
+            {
+              "label": "JVM Spec: Method Area",
+              "url": "https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-2.html#jvms-2.5.4"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "garbage collection (G1, ZGC)",
+          "url": "https://docs.oracle.com/en/java/javase/21/gctuning/garbage-first-g1-garbage-collector.html",
+          "resources": [
+            {
+              "label": "GC Tuning Guide",
+              "url": "https://docs.oracle.com/en/java/javase/21/gctuning/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "class loaders",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ClassLoader.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Java Memory Model",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html",
+          "resources": [
+            {
+              "label": "JLS: Memory Model",
+              "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Build Tools",
+      "url": "https://maven.apache.org/guides/",
+      "resources": [
+        {
+          "label": "Maven Guides",
+          "url": "https://maven.apache.org/guides/"
+        },
+        {
+          "label": "Gradle User Manual",
+          "url": "https://docs.gradle.org/current/userguide/userguide.html"
+        }
+      ],
+      "children": [
+        {
+          "name": "Maven",
+          "url": "https://maven.apache.org/guides/",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Gradle",
+          "url": "https://docs.gradle.org/current/userguide/userguide.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "dependency management",
+          "url": "https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html",
+          "resources": [
+            {
+              "label": "Maven: Dependency mechanism",
+              "url": "https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "JAR/WAR packaging",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/jar.html",
+          "resources": [
+            {
+              "label": "jar tool",
+              "url": "https://docs.oracle.com/en/java/javase/21/docs/specs/man/jar.html"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Testing",
+      "url": "https://junit.org/junit5/docs/current/user-guide/",
+      "resources": [
+        {
+          "label": "JUnit 5 User Guide",
+          "url": "https://junit.org/junit5/docs/current/user-guide/"
+        },
+        {
+          "label": "Mockito Docs",
+          "url": "https://site.mockito.org/"
+        }
+      ],
+      "children": [
+        {
+          "name": "JUnit",
+          "url": "https://junit.org/junit5/docs/current/user-guide/",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Mockito",
+          "url": "https://site.mockito.org/",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "test lifecycle",
+          "url": "https://junit.org/junit5/docs/current/user-guide/#writing-tests-lifecycle",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "integration tests",
+          "url": "https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing",
+          "resources": [
+            {
+              "label": "Spring Boot Testing",
+              "url": "https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Ecosystem",
+      "url": "https://spring.io/projects/spring-boot",
+      "resources": [
+        {
+          "label": "Spring Projects",
+          "url": "https://spring.io/projects"
+        }
+      ],
+      "children": [
+        {
+          "name": "Spring Boot",
+          "url": "https://docs.spring.io/spring-boot/docs/current/reference/html/",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Spring MVC",
+          "url": "https://docs.spring.io/spring-framework/docs/current/reference/html/web.html",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Spring Data",
+          "url": "https://spring.io/projects/spring-data",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Spring Security",
+          "url": "https://docs.spring.io/spring-security/reference/",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "JPA/Hibernate",
+          "url": "https://jakarta.ee/specifications/persistence/",
+          "resources": [
+            {
+              "label": "Jakarta Persistence (JPA)",
+              "url": "https://jakarta.ee/specifications/persistence/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "REST APIs",
+          "url": "https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-rest-spring-mvc",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "Docker + Java",
+          "url": "https://docs.docker.com/language/java/",
+          "resources": [
+            {
+              "label": "Docker Java guide",
+              "url": "https://docs.docker.com/language/java/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Microservices",
+          "url": "https://spring.io/microservices",
+          "resources": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

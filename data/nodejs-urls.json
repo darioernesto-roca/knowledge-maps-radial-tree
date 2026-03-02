@@ -1,0 +1,2409 @@
+{
+  "name": "Node.js",
+  "children": [
+    {
+      "name": "Runtime Basics",
+      "children": [
+        {
+          "name": "Node vs Browser (APIs & environment)",
+          "url": "https://nodejs.org/en/learn/getting-started/differences-between-nodejs-and-the-browser",
+          "resources": [
+            {
+              "label": "Node Learn",
+              "url": "https://nodejs.org/en/learn/getting-started/differences-between-nodejs-and-the-browser"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "V8 + libuv (what each does)",
+          "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+          "resources": [
+            {
+              "label": "Node Event Loop",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick"
+            },
+            {
+              "label": "libuv docs",
+              "url": "https://docs.libuv.org/en/v1.x/"
+            },
+            {
+              "label": "V8",
+              "url": "https://v8.dev/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "globalThis / global",
+          "url": "https://nodejs.org/api/globals.html",
+          "resources": [
+            {
+              "label": "Node globals",
+              "url": "https://nodejs.org/api/globals.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "process (env, argv, exit, signals)",
+          "url": "https://nodejs.org/api/process.html",
+          "resources": [
+            {
+              "label": "process",
+              "url": "https://nodejs.org/api/process.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Buffer (binary data, encodings)",
+          "url": "https://nodejs.org/api/buffer.html",
+          "resources": [
+            {
+              "label": "Buffer",
+              "url": "https://nodejs.org/api/buffer.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "__dirname / __filename (CJS) vs import.meta.url (ESM)",
+          "url": "https://nodejs.org/api/esm.html#importmetaurl",
+          "resources": [
+            {
+              "label": "ESM: import.meta.url",
+              "url": "https://nodejs.org/api/esm.html#importmetaurl"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Exit codes & graceful shutdown",
+          "url": "https://nodejs.org/api/process.html#exit-codes",
+          "resources": [
+            {
+              "label": "Exit codes",
+              "url": "https://nodejs.org/api/process.html#exit-codes"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+      "resources": [
+        {
+          "label": "Intro",
+          "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"
+        }
+      ]
+    },
+    {
+      "name": "Modules & Packages",
+      "children": [
+        {
+          "name": "CommonJS (CJS)",
+          "children": [
+            {
+              "name": "require()",
+              "url": "https://nodejs.org/api/modules.html#requireid",
+              "resources": [
+                {
+                  "label": "require",
+                  "url": "https://nodejs.org/api/modules.html#requireid"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "module.exports / exports",
+              "url": "https://nodejs.org/api/modules.html#moduleexports",
+              "resources": [
+                {
+                  "label": "module.exports",
+                  "url": "https://nodejs.org/api/modules.html#moduleexports"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "caching behavior",
+              "url": "https://nodejs.org/api/modules.html#caching",
+              "resources": [
+                {
+                  "label": "Module caching",
+                  "url": "https://nodejs.org/api/modules.html#caching"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/modules.html",
+          "resources": [
+            {
+              "label": "CJS Modules",
+              "url": "https://nodejs.org/api/modules.html"
+            }
+          ]
+        },
+        {
+          "name": "ES Modules (ESM)",
+          "children": [
+            {
+              "name": "import / export",
+              "url": "https://nodejs.org/api/esm.html",
+              "resources": [
+                {
+                  "label": "ESM overview",
+                  "url": "https://nodejs.org/api/esm.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "default export",
+              "url": "https://nodejs.org/api/esm.html",
+              "resources": [
+                {
+                  "label": "ESM exports",
+                  "url": "https://nodejs.org/api/esm.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "dynamic import()",
+              "url": "https://nodejs.org/api/esm.html#import-expressions",
+              "resources": [
+                {
+                  "label": "Dynamic import()",
+                  "url": "https://nodejs.org/api/esm.html#import-expressions"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "\"type\": \"module\"",
+              "url": "https://nodejs.org/api/packages.html#type",
+              "resources": [
+                {
+                  "label": "packages: type",
+                  "url": "https://nodejs.org/api/packages.html#type"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/esm.html",
+          "resources": [
+            {
+              "label": "ESM",
+              "url": "https://nodejs.org/api/esm.html"
+            }
+          ]
+        },
+        {
+          "name": "package.json",
+          "children": [
+            {
+              "name": "scripts",
+              "url": "https://docs.npmjs.com/cli/v11/using-npm/scripts/",
+              "resources": [
+                {
+                  "label": "npm scripts",
+                  "url": "https://docs.npmjs.com/cli/v11/using-npm/scripts/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "dependencies vs devDependencies",
+              "url": "https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file",
+              "resources": [
+                {
+                  "label": "npm deps vs devDeps",
+                  "url": "https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "engines (node version)",
+              "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#engines",
+              "resources": [
+                {
+                  "label": "engines field",
+                  "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#engines"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "main / module / exports field",
+              "url": "https://nodejs.org/api/packages.html",
+              "resources": [
+                {
+                  "label": "Node packages",
+                  "url": "https://nodejs.org/api/packages.html"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-json/",
+          "resources": [
+            {
+              "label": "npm package.json",
+              "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-json/"
+            }
+          ]
+        },
+        {
+          "name": "node_modules resolution",
+          "url": "https://nodejs.org/api/modules.html#all-together",
+          "resources": [
+            {
+              "label": "CJS resolution",
+              "url": "https://nodejs.org/api/modules.html#all-together"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Semantic Versioning (semver)",
+          "url": "https://semver.org/",
+          "resources": [
+            {
+              "label": "SemVer Spec",
+              "url": "https://semver.org/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Lockfiles (package-lock, pnpm-lock, yarn.lock)",
+          "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json/",
+          "resources": [
+            {
+              "label": "npm package-lock.json",
+              "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json/"
+            },
+            {
+              "label": "Yarn classic yarn.lock",
+              "url": "https://classic.yarnpkg.com/lang/en/docs/yarn-lock/"
+            },
+            {
+              "label": "pnpm",
+              "url": "https://pnpm.io/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "npx (run local/remote tools safely)",
+          "url": "https://docs.npmjs.com/cli/v10/commands/npx",
+          "resources": [
+            {
+              "label": "npm npx",
+              "url": "https://docs.npmjs.com/cli/v10/commands/npx"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://nodejs.org/api/modules.html",
+      "resources": [
+        {
+          "label": "Modules",
+          "url": "https://nodejs.org/api/modules.html"
+        }
+      ]
+    },
+    {
+      "name": "Async & Event Loop",
+      "children": [
+        {
+          "name": "Async Patterns",
+          "children": [
+            {
+              "name": "callbacks (error-first pattern)",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/understanding-asynchronous-programming",
+              "resources": [
+                {
+                  "label": "Node Learn async",
+                  "url": "https://nodejs.org/en/learn/asynchronous-work/understanding-asynchronous-programming"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Promises (then/catch/finally)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+              "resources": [
+                {
+                  "label": "MDN Promise",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "async/await (try/catch, parallel vs sequential)",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await",
+              "resources": [
+                {
+                  "label": "MDN async/await",
+                  "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous",
+          "resources": [
+            {
+              "label": "MDN Async JS",
+              "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous"
+            }
+          ]
+        },
+        {
+          "name": "Task Queues",
+          "children": [
+            {
+              "name": "microtasks (Promise jobs)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide",
+              "resources": [
+                {
+                  "label": "MDN Microtasks",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "process.nextTick queue",
+              "url": "https://nodejs.org/api/process.html#processnexttickcallback-args",
+              "resources": [
+                {
+                  "label": "process.nextTick",
+                  "url": "https://nodejs.org/api/process.html#processnexttickcallback-args"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "macrotasks (timers, I/O callbacks)",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+              "resources": [
+                {
+                  "label": "Event loop phases",
+                  "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+          "resources": [
+            {
+              "label": "Node event loop",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick"
+            }
+          ]
+        },
+        {
+          "name": "Timers",
+          "children": [
+            {
+              "name": "setTimeout / clearTimeout",
+              "url": "https://nodejs.org/api/timers.html#settimeoutcallback-delay-args",
+              "resources": [
+                {
+                  "label": "setTimeout",
+                  "url": "https://nodejs.org/api/timers.html#settimeoutcallback-delay-args"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "setInterval / clearInterval",
+              "url": "https://nodejs.org/api/timers.html#setintervalcallback-delay-args",
+              "resources": [
+                {
+                  "label": "setInterval",
+                  "url": "https://nodejs.org/api/timers.html#setintervalcallback-delay-args"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "setImmediate",
+              "url": "https://nodejs.org/api/timers.html#setimmediatecallback-args",
+              "resources": [
+                {
+                  "label": "setImmediate",
+                  "url": "https://nodejs.org/api/timers.html#setimmediatecallback-args"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/timers.html",
+          "resources": [
+            {
+              "label": "timers",
+              "url": "https://nodejs.org/api/timers.html"
+            }
+          ]
+        },
+        {
+          "name": "Event Loop Deep Dive",
+          "children": [
+            {
+              "name": "phases overview",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+              "resources": [
+                {
+                  "label": "Phases",
+                  "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "why blocking the event loop is bad",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop",
+              "resources": [
+                {
+                  "label": "Don't block the event loop",
+                  "url": "https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "detecting event loop lag",
+              "url": "https://nodejs.org/api/perf_hooks.html#perf_hooksmonitoreventloopdelayoptions",
+              "resources": [
+                {
+                  "label": "monitorEventLoopDelay",
+                  "url": "https://nodejs.org/api/perf_hooks.html#perf_hooksmonitoreventloopdelayoptions"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+          "resources": [
+            {
+              "label": "Node event loop deep dive",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick"
+            }
+          ]
+        },
+        {
+          "name": "Events",
+          "children": [
+            {
+              "name": "EventEmitter (on, once, emit)",
+              "url": "https://nodejs.org/api/events.html#class-eventemitter",
+              "resources": [
+                {
+                  "label": "EventEmitter",
+                  "url": "https://nodejs.org/api/events.html#class-eventemitter"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "removing listeners",
+              "url": "https://nodejs.org/api/events.html#emitteroffeventname-listener",
+              "resources": [
+                {
+                  "label": "remove listeners",
+                  "url": "https://nodejs.org/api/events.html#emitteroffeventname-listener"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "error events & crash patterns",
+              "url": "https://nodejs.org/api/events.html#error-events",
+              "resources": [
+                {
+                  "label": "error events",
+                  "url": "https://nodejs.org/api/events.html#error-events"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/events.html",
+          "resources": [
+            {
+              "label": "events",
+              "url": "https://nodejs.org/api/events.html"
+            }
+          ]
+        }
+      ],
+      "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+      "resources": [
+        {
+          "label": "Event loop",
+          "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick"
+        }
+      ]
+    },
+    {
+      "name": "Core APIs",
+      "children": [
+        {
+          "name": "fs",
+          "children": [
+            {
+              "name": "sync vs async",
+              "url": "https://nodejs.org/api/fs.html#synchronous-and-asynchronous-apis",
+              "resources": [
+                {
+                  "label": "sync vs async",
+                  "url": "https://nodejs.org/api/fs.html#synchronous-and-asynchronous-apis"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "fs.promises",
+              "url": "https://nodejs.org/api/fs.html#promises-api",
+              "resources": [
+                {
+                  "label": "fs.promises",
+                  "url": "https://nodejs.org/api/fs.html#promises-api"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "readFile / writeFile",
+              "url": "https://nodejs.org/api/fs.html#fsreadfilepath-options-callback",
+              "resources": [
+                {
+                  "label": "fs.readFile",
+                  "url": "https://nodejs.org/api/fs.html#fsreadfilepath-options-callback"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "mkdir / readdir",
+              "url": "https://nodejs.org/api/fs.html#fsmkdirpath-options-callback",
+              "resources": [
+                {
+                  "label": "fs.mkdir",
+                  "url": "https://nodejs.org/api/fs.html#fsmkdirpath-options-callback"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "watch / watchFile",
+              "url": "https://nodejs.org/api/fs.html#fswatchfilename-options-listener",
+              "resources": [
+                {
+                  "label": "fs.watch",
+                  "url": "https://nodejs.org/api/fs.html#fswatchfilename-options-listener"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/fs.html",
+          "resources": [
+            {
+              "label": "fs",
+              "url": "https://nodejs.org/api/fs.html"
+            }
+          ]
+        },
+        {
+          "name": "path",
+          "children": [
+            {
+              "name": "join / resolve",
+              "url": "https://nodejs.org/api/path.html#pathjoinpaths",
+              "resources": [
+                {
+                  "label": "path.join",
+                  "url": "https://nodejs.org/api/path.html#pathjoinpaths"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "basename / dirname / extname",
+              "url": "https://nodejs.org/api/path.html#pathbasenamepath-suffix",
+              "resources": [
+                {
+                  "label": "path.basename",
+                  "url": "https://nodejs.org/api/path.html#pathbasenamepath-suffix"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "path separators (cross-platform)",
+              "url": "https://nodejs.org/api/path.html#pathsep",
+              "resources": [
+                {
+                  "label": "path.sep",
+                  "url": "https://nodejs.org/api/path.html#pathsep"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/path.html",
+          "resources": [
+            {
+              "label": "path",
+              "url": "https://nodejs.org/api/path.html"
+            }
+          ]
+        },
+        {
+          "name": "http/https",
+          "children": [
+            {
+              "name": "createServer",
+              "url": "https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener",
+              "resources": [
+                {
+                  "label": "http.createServer",
+                  "url": "https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "request/response objects",
+              "url": "https://nodejs.org/api/http.html#class-httpincomingmessage",
+              "resources": [
+                {
+                  "label": "IncomingMessage",
+                  "url": "https://nodejs.org/api/http.html#class-httpincomingmessage"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "headers & status codes",
+              "url": "https://nodejs.org/api/http.html#responsewriteheadstatuscode-statusmessage-headers",
+              "resources": [
+                {
+                  "label": "writeHead",
+                  "url": "https://nodejs.org/api/http.html#responsewriteheadstatuscode-statusmessage-headers"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "streaming responses",
+              "url": "https://nodejs.org/api/http.html#responsewritechunk-encoding-callback",
+              "resources": [
+                {
+                  "label": "response.write",
+                  "url": "https://nodejs.org/api/http.html#responsewritechunk-encoding-callback"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/http.html",
+          "resources": [
+            {
+              "label": "http",
+              "url": "https://nodejs.org/api/http.html"
+            }
+          ]
+        },
+        {
+          "name": "url",
+          "children": [
+            {
+              "name": "URL / URLSearchParams",
+              "url": "https://nodejs.org/api/url.html#the-whatwg-url-api",
+              "resources": [
+                {
+                  "label": "WHATWG URL",
+                  "url": "https://nodejs.org/api/url.html#the-whatwg-url-api"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "query parsing & encoding",
+              "url": "https://nodejs.org/api/url.html#class-urlsearchparams",
+              "resources": [
+                {
+                  "label": "URLSearchParams",
+                  "url": "https://nodejs.org/api/url.html#class-urlsearchparams"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/url.html",
+          "resources": [
+            {
+              "label": "url",
+              "url": "https://nodejs.org/api/url.html"
+            }
+          ]
+        },
+        {
+          "name": "crypto",
+          "children": [
+            {
+              "name": "hashing (sha256 etc.)",
+              "url": "https://nodejs.org/api/crypto.html#cryptocreatehashalgorithm-options",
+              "resources": [
+                {
+                  "label": "createHash",
+                  "url": "https://nodejs.org/api/crypto.html#cryptocreatehashalgorithm-options"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "HMAC",
+              "url": "https://nodejs.org/api/crypto.html#cryptocreatehmacalgorithm-key-options",
+              "resources": [
+                {
+                  "label": "createHmac",
+                  "url": "https://nodejs.org/api/crypto.html#cryptocreatehmacalgorithm-key-options"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "randomBytes",
+              "url": "https://nodejs.org/api/crypto.html#cryptorandombytessize-callback",
+              "resources": [
+                {
+                  "label": "randomBytes",
+                  "url": "https://nodejs.org/api/crypto.html#cryptorandombytessize-callback"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "password hashing (bcrypt/argon2 concept)",
+              "url": "https://example-nodejs.com",
+              "resources": [
+                {
+                  "label": "OWASP Password Storage",
+                  "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/crypto.html",
+          "resources": [
+            {
+              "label": "crypto",
+              "url": "https://nodejs.org/api/crypto.html"
+            }
+          ]
+        },
+        {
+          "name": "os",
+          "children": [
+            {
+              "name": "cpu/memory info",
+              "url": "https://nodejs.org/api/os.html#oscpus",
+              "resources": [
+                {
+                  "label": "os.cpus",
+                  "url": "https://nodejs.org/api/os.html#oscpus"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "platform detection",
+              "url": "https://nodejs.org/api/os.html#osplatform",
+              "resources": [
+                {
+                  "label": "os.platform",
+                  "url": "https://nodejs.org/api/os.html#osplatform"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/os.html",
+          "resources": [
+            {
+              "label": "os",
+              "url": "https://nodejs.org/api/os.html"
+            }
+          ]
+        }
+      ],
+      "url": "https://nodejs.org/api/",
+      "resources": [
+        {
+          "label": "Node API Reference",
+          "url": "https://nodejs.org/api/"
+        }
+      ]
+    },
+    {
+      "name": "Streams & Buffers",
+      "children": [
+        {
+          "name": "Buffer (encoding, base64, UTF-8)",
+          "url": "https://nodejs.org/api/buffer.html",
+          "resources": [
+            {
+              "label": "Buffer",
+              "url": "https://nodejs.org/api/buffer.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Stream Types",
+          "children": [
+            {
+              "name": "Readable",
+              "url": "https://nodejs.org/api/stream.html#class-streamreadable",
+              "resources": [
+                {
+                  "label": "Readable",
+                  "url": "https://nodejs.org/api/stream.html#class-streamreadable"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Writable",
+              "url": "https://nodejs.org/api/stream.html#class-streamwritable",
+              "resources": [
+                {
+                  "label": "Writable",
+                  "url": "https://nodejs.org/api/stream.html#class-streamwritable"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Duplex",
+              "url": "https://nodejs.org/api/stream.html#class-streamduplex",
+              "resources": [
+                {
+                  "label": "Duplex",
+                  "url": "https://nodejs.org/api/stream.html#class-streamduplex"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Transform",
+              "url": "https://nodejs.org/api/stream.html#class-streamtransform",
+              "resources": [
+                {
+                  "label": "Transform",
+                  "url": "https://nodejs.org/api/stream.html#class-streamtransform"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://nodejs.org/api/stream.html#stream-types",
+          "resources": [
+            {
+              "label": "Stream types",
+              "url": "https://nodejs.org/api/stream.html#stream-types"
+            }
+          ]
+        },
+        {
+          "name": "pipe()",
+          "url": "https://nodejs.org/api/stream.html#readablepipedestination-options",
+          "resources": [
+            {
+              "label": "readable.pipe",
+              "url": "https://nodejs.org/api/stream.html#readablepipedestination-options"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "pipeline()",
+          "url": "https://nodejs.org/api/stream.html#streampipelinesource-transforms-destination-callback",
+          "resources": [
+            {
+              "label": "stream.pipeline",
+              "url": "https://nodejs.org/api/stream.html#streampipelinesource-transforms-destination-callback"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "backpressure",
+          "url": "https://nodejs.org/api/stream.html#backpressure",
+          "resources": [
+            {
+              "label": "Backpressure",
+              "url": "https://nodejs.org/api/stream.html#backpressure"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "stream error handling",
+          "url": "https://nodejs.org/api/stream.html#error-handling",
+          "resources": [
+            {
+              "label": "Error handling",
+              "url": "https://nodejs.org/api/stream.html#error-handling"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://nodejs.org/api/stream.html",
+      "resources": [
+        {
+          "label": "stream",
+          "url": "https://nodejs.org/api/stream.html"
+        }
+      ]
+    },
+    {
+      "name": "Networking for Full-Stack",
+      "children": [
+        {
+          "name": "REST Fundamentals",
+          "children": [
+            {
+              "name": "HTTP methods (GET/POST/PUT/PATCH/DELETE)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods",
+              "resources": [
+                {
+                  "label": "MDN HTTP methods",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "status codes (2xx/4xx/5xx)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
+              "resources": [
+                {
+                  "label": "MDN Status codes",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "request/response headers",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers",
+              "resources": [
+                {
+                  "label": "MDN Headers",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "pagination & filtering",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+          "resources": [
+            {
+              "label": "MDN HTTP overview",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+            }
+          ]
+        },
+        {
+          "name": "CORS",
+          "children": [
+            {
+              "name": "same-origin policy (why it exists)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy",
+              "resources": [
+                {
+                  "label": "MDN Same-origin",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "preflight OPTIONS",
+              "url": "https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request",
+              "resources": [
+                {
+                  "label": "MDN Preflight",
+                  "url": "https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "credentials + cookies",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#requests_with_credentials",
+              "resources": [
+                {
+                  "label": "CORS credentials",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#requests_with_credentials"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+          "resources": [
+            {
+              "label": "MDN CORS",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
+            }
+          ]
+        },
+        {
+          "name": "TLS Basics",
+          "children": [
+            {
+              "name": "HTTPS concept",
+              "url": "https://developer.mozilla.org/en-US/docs/Glossary/HTTPS",
+              "resources": [
+                {
+                  "label": "MDN HTTPS",
+                  "url": "https://developer.mozilla.org/en-US/docs/Glossary/HTTPS"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "certificates (what they prove)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "reverse proxy termination concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security",
+          "resources": [
+            {
+              "label": "MDN TLS",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
+            }
+          ]
+        },
+        {
+          "name": "WebSockets",
+          "children": [
+            {
+              "name": "ws basics",
+              "url": "https://github.com/websockets/ws",
+              "resources": [
+                {
+                  "label": "ws (GitHub)",
+                  "url": "https://github.com/websockets/ws"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Socket.io concept",
+              "url": "https://socket.io/docs/v4/",
+              "resources": [
+                {
+                  "label": "Socket.IO docs",
+                  "url": "https://socket.io/docs/v4/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "real-time events (chat, notifications)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+          "resources": [
+            {
+              "label": "MDN WebSockets",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+            }
+          ]
+        }
+      ],
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+      "resources": [
+        {
+          "label": "MDN HTTP",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+        }
+      ]
+    },
+    {
+      "name": "Express Ecosystem (API Layer)",
+      "children": [
+        {
+          "name": "App Structure",
+          "children": [
+            {
+              "name": "app vs router",
+              "url": "https://expressjs.com/en/guide/routing.html#express-router",
+              "resources": [
+                {
+                  "label": "express.Router",
+                  "url": "https://expressjs.com/en/guide/routing.html#express-router"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "folder structure (routes/controllers/services)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "config management",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Routing",
+          "children": [
+            {
+              "name": "route params",
+              "url": "https://expressjs.com/en/guide/routing.html#route-parameters",
+              "resources": [
+                {
+                  "label": "Route params",
+                  "url": "https://expressjs.com/en/guide/routing.html#route-parameters"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "query params",
+              "url": "https://expressjs.com/en/api.html#req.query",
+              "resources": [
+                {
+                  "label": "req.query",
+                  "url": "https://expressjs.com/en/api.html#req.query"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "request body parsing (express.json)",
+              "url": "https://expressjs.com/en/api.html#express.json",
+              "resources": [
+                {
+                  "label": "express.json",
+                  "url": "https://expressjs.com/en/api.html#express.json"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Middleware",
+          "children": [
+            {
+              "name": "middleware order",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "auth middleware",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "logging middleware",
+              "url": "https://github.com/expressjs/morgan",
+              "resources": [
+                {
+                  "label": "morgan",
+                  "url": "https://github.com/expressjs/morgan"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "static files",
+              "url": "https://expressjs.com/en/starter/static-files.html",
+              "resources": [
+                {
+                  "label": "Static files",
+                  "url": "https://expressjs.com/en/starter/static-files.html"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://expressjs.com/en/guide/using-middleware.html",
+          "resources": [
+            {
+              "label": "Using middleware",
+              "url": "https://expressjs.com/en/guide/using-middleware.html"
+            }
+          ]
+        },
+        {
+          "name": "Validation",
+          "children": [
+            {
+              "name": "schema validation (zod/joi concept)",
+              "url": "https://zod.dev/",
+              "resources": [
+                {
+                  "label": "Zod",
+                  "url": "https://zod.dev/"
+                },
+                {
+                  "label": "Joi",
+                  "url": "https://joi.dev/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "sanitization",
+              "url": "https://github.com/validatorjs/validator.js",
+              "resources": [
+                {
+                  "label": "validator.js",
+                  "url": "https://github.com/validatorjs/validator.js"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "consistent error responses",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Error Handling",
+          "children": [
+            {
+              "name": "central error handler",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "async errors pattern",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "not found (404) handler",
+              "url": "https://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses",
+              "resources": [
+                {
+                  "label": "Express 404",
+                  "url": "https://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://expressjs.com/en/guide/error-handling.html",
+          "resources": [
+            {
+              "label": "Express error handling",
+              "url": "https://expressjs.com/en/guide/error-handling.html"
+            }
+          ]
+        }
+      ],
+      "url": "https://expressjs.com/",
+      "resources": [
+        {
+          "label": "Express docs",
+          "url": "https://expressjs.com/"
+        }
+      ]
+    },
+    {
+      "name": "Databases (Full-Stack Focus)",
+      "children": [
+        {
+          "name": "SQL (PostgreSQL)",
+          "children": [
+            {
+              "name": "connections & pooling",
+              "url": "https://node-postgres.com/features/pooling",
+              "resources": [
+                {
+                  "label": "pg pooling",
+                  "url": "https://node-postgres.com/features/pooling"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "CRUD + joins (concept)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "transactions (concept)",
+              "url": "https://node-postgres.com/features/transactions",
+              "resources": [
+                {
+                  "label": "pg transactions",
+                  "url": "https://node-postgres.com/features/transactions"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://node-postgres.com/",
+          "resources": [
+            {
+              "label": "node-postgres",
+              "url": "https://node-postgres.com/"
+            }
+          ]
+        },
+        {
+          "name": "NoSQL (MongoDB)",
+          "children": [
+            {
+              "name": "documents & collections",
+              "url": "https://www.mongodb.com/docs/manual/core/databases-and-collections/",
+              "resources": [
+                {
+                  "label": "Mongo collections",
+                  "url": "https://www.mongodb.com/docs/manual/core/databases-and-collections/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "indexes concept",
+              "url": "https://www.mongodb.com/docs/manual/indexes/",
+              "resources": [
+                {
+                  "label": "Mongo indexes",
+                  "url": "https://www.mongodb.com/docs/manual/indexes/"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://www.mongodb.com/docs/drivers/node/current/",
+          "resources": [
+            {
+              "label": "MongoDB Node driver",
+              "url": "https://www.mongodb.com/docs/drivers/node/current/"
+            }
+          ]
+        },
+        {
+          "name": "ORM / Query Builders",
+          "children": [
+            {
+              "name": "Prisma (schema, client, migrations)",
+              "url": "https://www.prisma.io/docs",
+              "resources": [
+                {
+                  "label": "Prisma docs",
+                  "url": "https://www.prisma.io/docs"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Sequelize (models, migrations)",
+              "url": "https://sequelize.org/docs/v6/",
+              "resources": [
+                {
+                  "label": "Sequelize docs",
+                  "url": "https://sequelize.org/docs/v6/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Knex (query builder concept)",
+              "url": "https://knexjs.org/guide/",
+              "resources": [
+                {
+                  "label": "Knex guide",
+                  "url": "https://knexjs.org/guide/"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Migrations",
+          "children": [
+            {
+              "name": "migration strategy",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "seeding data",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "rollback concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Caching",
+          "children": [
+            {
+              "name": "Redis basics",
+              "url": "https://redis.io/docs/latest/develop/clients/nodejs/",
+              "resources": [
+                {
+                  "label": "Redis Node.js",
+                  "url": "https://redis.io/docs/latest/develop/clients/nodejs/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "cache invalidation concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    },
+    {
+      "name": "Auth & Sessions (Full-Stack)",
+      "children": [
+        {
+          "name": "Auth Models",
+          "children": [
+            {
+              "name": "sessions vs JWT",
+              "url": "https://datatracker.ietf.org/doc/html/rfc7519",
+              "resources": [
+                {
+                  "label": "JWT RFC 7519",
+                  "url": "https://datatracker.ietf.org/doc/html/rfc7519"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "access token vs refresh token",
+              "url": "https://datatracker.ietf.org/doc/html/rfc6749",
+              "resources": [
+                {
+                  "label": "OAuth 2.0 RFC 6749",
+                  "url": "https://datatracker.ietf.org/doc/html/rfc6749"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "JWT",
+          "children": [
+            {
+              "name": "sign/verify concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "token expiration",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "secure storage strategy (httpOnly cookies)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies",
+              "resources": [
+                {
+                  "label": "MDN Cookies",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://datatracker.ietf.org/doc/html/rfc7519",
+          "resources": [
+            {
+              "label": "JWT RFC 7519",
+              "url": "https://datatracker.ietf.org/doc/html/rfc7519"
+            }
+          ]
+        },
+        {
+          "name": "Cookies & Sessions",
+          "children": [
+            {
+              "name": "cookie flags (HttpOnly, Secure, SameSite)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie",
+              "resources": [
+                {
+                  "label": "Set-Cookie",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "session stores (Redis concept)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "OAuth Basics",
+          "children": [
+            {
+              "name": "authorization code flow (concept)",
+              "url": "https://datatracker.ietf.org/doc/html/rfc6749#section-4.1",
+              "resources": [
+                {
+                  "label": "Authorization Code Grant",
+                  "url": "https://datatracker.ietf.org/doc/html/rfc6749#section-4.1"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "social login concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    },
+    {
+      "name": "Full-Stack Integration",
+      "children": [
+        {
+          "name": "Backend + Frontend",
+          "children": [
+            {
+              "name": "API contracts (request/response shape)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "CORS + cookies end-to-end",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "file uploads (multipart/form-data concept)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "SSR / Framework Integration",
+          "children": [
+            {
+              "name": "Next.js API routes concept",
+              "url": "https://nextjs.org/docs/pages/building-your-application/routing/api-routes",
+              "resources": [
+                {
+                  "label": "Next.js API Routes",
+                  "url": "https://nextjs.org/docs/pages/building-your-application/routing/api-routes"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "server actions concept (high level)",
+              "url": "https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations",
+              "resources": [
+                {
+                  "label": "Next.js Server Actions",
+                  "url": "https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "BFF pattern (backend for frontend)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Realtime UI",
+          "children": [
+            {
+              "name": "WebSockets for notifications",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "pub/sub concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    },
+    {
+      "name": "Testing",
+      "children": [
+        {
+          "name": "Unit Testing",
+          "children": [
+            {
+              "name": "Jest",
+              "url": "https://jestjs.io/docs/getting-started",
+              "resources": [
+                {
+                  "label": "Jest docs",
+                  "url": "https://jestjs.io/docs/getting-started"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Vitest",
+              "url": "https://vitest.dev/guide/",
+              "resources": [
+                {
+                  "label": "Vitest guide",
+                  "url": "https://vitest.dev/guide/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "assertions",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "mocks/stubs/spies",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "API Testing",
+          "children": [
+            {
+              "name": "Supertest",
+              "url": "https://github.com/ladjs/supertest",
+              "resources": [
+                {
+                  "label": "Supertest",
+                  "url": "https://github.com/ladjs/supertest"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "test database strategy",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Integration & E2E Concepts",
+          "children": [
+            {
+              "name": "test environment setup",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "fixtures & seeding",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    },
+    {
+      "name": "Tooling & Developer Experience",
+      "children": [
+        {
+          "name": "Package Managers",
+          "children": [
+            {
+              "name": "npm",
+              "url": "https://docs.npmjs.com/",
+              "resources": [
+                {
+                  "label": "npm docs",
+                  "url": "https://docs.npmjs.com/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "pnpm",
+              "url": "https://pnpm.io/",
+              "resources": [
+                {
+                  "label": "pnpm",
+                  "url": "https://pnpm.io/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "yarn",
+              "url": "https://yarnpkg.com/getting-started",
+              "resources": [
+                {
+                  "label": "Yarn",
+                  "url": "https://yarnpkg.com/getting-started"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Linting & Formatting",
+          "children": [
+            {
+              "name": "eslint",
+              "url": "https://eslint.org/docs/latest/",
+              "resources": [
+                {
+                  "label": "ESLint docs",
+                  "url": "https://eslint.org/docs/latest/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "prettier",
+              "url": "https://prettier.io/docs/en/",
+              "resources": [
+                {
+                  "label": "Prettier docs",
+                  "url": "https://prettier.io/docs/en/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "shared config strategy",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "TypeScript",
+          "children": [
+            {
+              "name": "tsconfig basics",
+              "url": "https://www.typescriptlang.org/tsconfig",
+              "resources": [
+                {
+                  "label": "TSConfig",
+                  "url": "https://www.typescriptlang.org/tsconfig"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "types for Node (DefinitelyTyped)",
+              "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
+              "resources": [
+                {
+                  "label": "@types/node",
+                  "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "ESM vs CJS in TS projects",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Dev Servers",
+          "children": [
+            {
+              "name": "nodemon",
+              "url": "https://github.com/remy/nodemon",
+              "resources": [
+                {
+                  "label": "nodemon",
+                  "url": "https://github.com/remy/nodemon"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "ts-node / tsx",
+              "url": "https://typestrong.org/ts-node/docs/",
+              "resources": [
+                {
+                  "label": "ts-node",
+                  "url": "https://typestrong.org/ts-node/docs/"
+                },
+                {
+                  "label": "tsx",
+                  "url": "https://github.com/privatenumber/tsx"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    },
+    {
+      "name": "Security (Full-Stack Essentials)",
+      "children": [
+        {
+          "name": "OWASP Basics",
+          "children": [
+            {
+              "name": "injection (SQL/NoSQL) concept",
+              "url": "https://owasp.org/www-community/attacks/SQL_Injection",
+              "resources": [
+                {
+                  "label": "OWASP SQLi",
+                  "url": "https://owasp.org/www-community/attacks/SQL_Injection"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "XSS concept",
+              "url": "https://owasp.org/www-community/attacks/xss/",
+              "resources": [
+                {
+                  "label": "OWASP XSS",
+                  "url": "https://owasp.org/www-community/attacks/xss/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "CSRF concept",
+              "url": "https://owasp.org/www-community/attacks/csrf",
+              "resources": [
+                {
+                  "label": "OWASP CSRF",
+                  "url": "https://owasp.org/www-community/attacks/csrf"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "broken auth concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://owasp.org/Top10/",
+          "resources": [
+            {
+              "label": "OWASP Top 10",
+              "url": "https://owasp.org/Top10/"
+            }
+          ]
+        },
+        {
+          "name": "API Hardening",
+          "children": [
+            {
+              "name": "rate limiting",
+              "url": "https://github.com/express-rate-limit/express-rate-limit",
+              "resources": [
+                {
+                  "label": "express-rate-limit",
+                  "url": "https://github.com/express-rate-limit/express-rate-limit"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Helmet (secure headers)",
+              "url": "https://helmetjs.github.io/",
+              "resources": [
+                {
+                  "label": "Helmet",
+                  "url": "https://helmetjs.github.io/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "input validation everywhere",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "CORS configuration",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Secrets Management",
+          "children": [
+            {
+              "name": ".env usage",
+              "url": "https://github.com/motdotla/dotenv",
+              "resources": [
+                {
+                  "label": "dotenv",
+                  "url": "https://github.com/motdotla/dotenv"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "never commit secrets",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "rotating keys concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Dependency Security",
+          "children": [
+            {
+              "name": "npm audit",
+              "url": "https://docs.npmjs.com/cli/v11/commands/npm-audit",
+              "resources": [
+                {
+                  "label": "npm audit",
+                  "url": "https://docs.npmjs.com/cli/v11/commands/npm-audit"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Snyk concept",
+              "url": "https://docs.snyk.io/",
+              "resources": [
+                {
+                  "label": "Snyk docs",
+                  "url": "https://docs.snyk.io/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "supply chain awareness concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    },
+    {
+      "name": "Performance & Observability",
+      "children": [
+        {
+          "name": "Performance",
+          "children": [
+            {
+              "name": "avoid blocking the event loop",
+              "url": "https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop",
+              "resources": [
+                {
+                  "label": "Don't block the event loop",
+                  "url": "https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "caching strategy",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "compression concept",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Compression",
+              "resources": [
+                {
+                  "label": "HTTP compression",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Compression"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Debugging",
+          "children": [
+            {
+              "name": "node --inspect",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Chrome DevTools for Node",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "profiling basics (CPU/memory)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Logging & Monitoring",
+          "children": [
+            {
+              "name": "structured logging concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "request IDs / correlation IDs",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "health checks",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    },
+    {
+      "name": "Deployment",
+      "children": [
+        {
+          "name": "Environment",
+          "children": [
+            {
+              "name": "env vars",
+              "url": "https://nodejs.org/api/process.html#processenv",
+              "resources": [
+                {
+                  "label": "process.env",
+                  "url": "https://nodejs.org/api/process.html#processenv"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "config per environment (dev/staging/prod)",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Docker Basics",
+          "children": [
+            {
+              "name": "Dockerfile concept",
+              "url": "https://docs.docker.com/engine/reference/builder/",
+              "resources": [
+                {
+                  "label": "Dockerfile reference",
+                  "url": "https://docs.docker.com/engine/reference/builder/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "multi-stage builds concept",
+              "url": "https://docs.docker.com/build/building/multi-stage/",
+              "resources": [
+                {
+                  "label": "Multi-stage builds",
+                  "url": "https://docs.docker.com/build/building/multi-stage/"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.docker.com/language/nodejs/",
+          "resources": [
+            {
+              "label": "Docker Node.js guide",
+              "url": "https://docs.docker.com/language/nodejs/"
+            }
+          ]
+        },
+        {
+          "name": "Process Management",
+          "children": [
+            {
+              "name": "PM2",
+              "url": "https://pm2.keymetrics.io/docs/usage/quick-start/",
+              "resources": [
+                {
+                  "label": "PM2 Quick Start",
+                  "url": "https://pm2.keymetrics.io/docs/usage/quick-start/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "graceful restart concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Reverse Proxy",
+          "children": [
+            {
+              "name": "Nginx concept",
+              "url": "https://nginx.org/en/docs/",
+              "resources": [
+                {
+                  "label": "Nginx docs",
+                  "url": "https://nginx.org/en/docs/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "TLS termination concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "static assets + caching headers concept",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control",
+              "resources": [
+                {
+                  "label": "Cache-Control",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        },
+        {
+          "name": "Hosting Models",
+          "children": [
+            {
+              "name": "traditional VPS",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "serverless concept",
+              "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html",
+              "resources": [
+                {
+                  "label": "AWS Lambda",
+                  "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "platform-as-a-service concept",
+              "url": "https://example-nodejs.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-nodejs.com",
+          "resources": []
+        }
+      ],
+      "url": "https://example-nodejs.com",
+      "resources": []
+    }
+  ],
+  "url": "https://nodejs.org/en",
+  "resources": [
+    {
+      "label": "Node.js Learn",
+      "url": "https://nodejs.org/en/learn"
+    },
+    {
+      "label": "Node.js API Reference",
+      "url": "https://nodejs.org/api/"
+    }
+  ]
+}

@@ -1,0 +1,1868 @@
+{
+  "name": "Python",
+  "children": [
+    {
+      "name": "Fundamentals",
+      "children": [
+        {
+          "name": "Interpreter vs Script",
+          "url": "https://docs.python.org/3/tutorial/interpreter.html",
+          "resources": [
+            {
+              "label": "Using the interpreter",
+              "url": "https://docs.python.org/3/tutorial/interpreter.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "REPL",
+          "url": "https://docs.python.org/3/tutorial/interpreter.html",
+          "resources": [
+            {
+              "label": "Interactive mode",
+              "url": "https://docs.python.org/3/tutorial/interpreter.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "__name__ == '__main__'",
+          "url": "https://docs.python.org/3/library/__main__.html",
+          "resources": [
+            {
+              "label": "__main__",
+              "url": "https://docs.python.org/3/library/__main__.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Indentation & Blocks",
+          "url": "https://docs.python.org/3/reference/lexical_analysis.html#indentation",
+          "resources": [
+            {
+              "label": "Indentation",
+              "url": "https://docs.python.org/3/reference/lexical_analysis.html#indentation"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Variables and Names",
+          "url": "https://docs.python.org/3/reference/executionmodel.html#naming-and-binding",
+          "resources": [
+            {
+              "label": "Naming and binding",
+              "url": "https://docs.python.org/3/reference/executionmodel.html#naming-and-binding"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Assignment & Mutability (concept)",
+          "url": "https://docs.python.org/3/reference/simple_stmts.html#assignment-statements",
+          "resources": [
+            {
+              "label": "Assignment",
+              "url": "https://docs.python.org/3/reference/simple_stmts.html#assignment-statements"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Truthy/Falsy",
+          "url": "https://docs.python.org/3/library/stdtypes.html#truth-value-testing",
+          "resources": [
+            {
+              "label": "Truth value testing",
+              "url": "https://docs.python.org/3/library/stdtypes.html#truth-value-testing"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Basic I/O (print/input)",
+          "url": "https://docs.python.org/3/tutorial/inputoutput.html",
+          "resources": [
+            {
+              "label": "Input/Output",
+              "url": "https://docs.python.org/3/tutorial/inputoutput.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "f-strings",
+          "url": "https://docs.python.org/3/reference/lexical_analysis.html#f-strings",
+          "resources": [
+            {
+              "label": "f-strings",
+              "url": "https://docs.python.org/3/reference/lexical_analysis.html#f-strings"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "resources": [
+        {
+          "label": "Tutorial",
+          "url": "https://docs.python.org/3/tutorial/index.html"
+        }
+      ]
+    },
+    {
+      "name": "Data Types",
+      "children": [
+        {
+          "name": "int / float",
+          "url": "https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex",
+          "resources": [
+            {
+              "label": "Numeric types",
+              "url": "https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "bool",
+          "url": "https://docs.python.org/3/library/stdtypes.html#boolean-type-bool",
+          "resources": [
+            {
+              "label": "bool",
+              "url": "https://docs.python.org/3/library/stdtypes.html#boolean-type-bool"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "str",
+          "url": "https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str",
+          "resources": [
+            {
+              "label": "str",
+              "url": "https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "None",
+          "url": "https://docs.python.org/3/library/constants.html#None",
+          "resources": [
+            {
+              "label": "None",
+              "url": "https://docs.python.org/3/library/constants.html#None"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "bytes / bytearray",
+          "url": "https://docs.python.org/3/library/stdtypes.html#binary-sequence-types-bytes-bytearray-memoryview",
+          "resources": [
+            {
+              "label": "bytes/bytearray",
+              "url": "https://docs.python.org/3/library/stdtypes.html#binary-sequence-types-bytes-bytearray-memoryview"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "type() / isinstance()",
+          "url": "https://docs.python.org/3/library/functions.html#type",
+          "resources": [
+            {
+              "label": "type",
+              "url": "https://docs.python.org/3/library/functions.html#type"
+            },
+            {
+              "label": "isinstance",
+              "url": "https://docs.python.org/3/library/functions.html#isinstance"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "casting (int(), str(), float())",
+          "url": "https://docs.python.org/3/library/functions.html#int",
+          "resources": [
+            {
+              "label": "int",
+              "url": "https://docs.python.org/3/library/functions.html#int"
+            },
+            {
+              "label": "str",
+              "url": "https://docs.python.org/3/library/functions.html#str"
+            },
+            {
+              "label": "float",
+              "url": "https://docs.python.org/3/library/functions.html#float"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/library/stdtypes.html",
+      "resources": [
+        {
+          "label": "Built-in types",
+          "url": "https://docs.python.org/3/library/stdtypes.html"
+        }
+      ]
+    },
+    {
+      "name": "Collections",
+      "children": [
+        {
+          "name": "list",
+          "children": [
+            {
+              "name": "indexing & slicing",
+              "url": "https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range",
+              "resources": [
+                {
+                  "label": "Sequence types",
+                  "url": "https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "append/extend/insert/pop",
+              "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists",
+              "resources": [
+                {
+                  "label": "List methods",
+                  "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "comprehensions",
+              "url": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions",
+              "resources": [
+                {
+                  "label": "List comprehensions",
+                  "url": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "sort vs sorted",
+              "url": "https://docs.python.org/3/howto/sorting.html",
+              "resources": [
+                {
+                  "label": "Sorting HOWTO",
+                  "url": "https://docs.python.org/3/howto/sorting.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "copy pitfalls (shared refs)",
+              "url": "https://docs.python.org/3/library/copy.html",
+              "resources": [
+                {
+                  "label": "copy module",
+                  "url": "https://docs.python.org/3/library/copy.html"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/stdtypes.html#list",
+          "resources": [
+            {
+              "label": "list",
+              "url": "https://docs.python.org/3/library/stdtypes.html#list"
+            }
+          ]
+        },
+        {
+          "name": "dict",
+          "children": [
+            {
+              "name": "keys/values/items",
+              "url": "https://docs.python.org/3/library/stdtypes.html#dict-views",
+              "resources": [
+                {
+                  "label": "Dict views",
+                  "url": "https://docs.python.org/3/library/stdtypes.html#dict-views"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "get() and 'in'",
+              "url": "https://docs.python.org/3/library/stdtypes.html#mapping-types-dict",
+              "resources": [
+                {
+                  "label": "dict.get",
+                  "url": "https://docs.python.org/3/library/stdtypes.html#dict.get"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "dict comprehension",
+              "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries",
+              "resources": [
+                {
+                  "label": "Dictionaries",
+                  "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "defaultdict",
+              "url": "https://docs.python.org/3/library/collections.html#collections.defaultdict",
+              "resources": [
+                {
+                  "label": "defaultdict",
+                  "url": "https://docs.python.org/3/library/collections.html#collections.defaultdict"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Counter",
+              "url": "https://docs.python.org/3/library/collections.html#collections.Counter",
+              "resources": [
+                {
+                  "label": "Counter",
+                  "url": "https://docs.python.org/3/library/collections.html#collections.Counter"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/stdtypes.html#mapping-types-dict",
+          "resources": [
+            {
+              "label": "dict",
+              "url": "https://docs.python.org/3/library/stdtypes.html#mapping-types-dict"
+            }
+          ]
+        },
+        {
+          "name": "tuple",
+          "children": [
+            {
+              "name": "immutability",
+              "url": "https://docs.python.org/3/reference/datamodel.html#objects-values-and-types",
+              "resources": [
+                {
+                  "label": "Objects, values and types",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#objects-values-and-types"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "unpacking",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists",
+              "resources": [
+                {
+                  "label": "Unpacking",
+                  "url": "https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/stdtypes.html#tuple",
+          "resources": [
+            {
+              "label": "tuple",
+              "url": "https://docs.python.org/3/library/stdtypes.html#tuple"
+            }
+          ]
+        },
+        {
+          "name": "set",
+          "children": [
+            {
+              "name": "unique values",
+              "url": "https://docs.python.org/3/tutorial/datastructures.html#sets",
+              "resources": [
+                {
+                  "label": "Sets",
+                  "url": "https://docs.python.org/3/tutorial/datastructures.html#sets"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "union/intersection/difference",
+              "url": "https://docs.python.org/3/tutorial/datastructures.html#sets",
+              "resources": [
+                {
+                  "label": "Set operations",
+                  "url": "https://docs.python.org/3/tutorial/datastructures.html#sets"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/stdtypes.html#set",
+          "resources": [
+            {
+              "label": "set",
+              "url": "https://docs.python.org/3/library/stdtypes.html#set"
+            }
+          ]
+        },
+        {
+          "name": "range",
+          "children": [
+            {
+              "name": "iteration-friendly sequences",
+              "url": "https://docs.python.org/3/library/stdtypes.html#range",
+              "resources": [
+                {
+                  "label": "range",
+                  "url": "https://docs.python.org/3/library/stdtypes.html#range"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/stdtypes.html#range",
+          "resources": [
+            {
+              "label": "range",
+              "url": "https://docs.python.org/3/library/stdtypes.html#range"
+            }
+          ]
+        }
+      ],
+      "url": "https://docs.python.org/3/library/stdtypes.html",
+      "resources": [
+        {
+          "label": "Built-in types",
+          "url": "https://docs.python.org/3/library/stdtypes.html"
+        }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "children": [
+        {
+          "name": "if / elif / else",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#if-statements",
+          "resources": [
+            {
+              "label": "if statements",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "for loops",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#for-statements",
+          "resources": [
+            {
+              "label": "for statements",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "while loops",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops",
+          "resources": [
+            {
+              "label": "while/break/continue",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "break / continue",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops",
+          "resources": [
+            {
+              "label": "break/continue",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "loop else clause",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#else-clauses-on-loops",
+          "resources": [
+            {
+              "label": "else on loops",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#else-clauses-on-loops"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "match/case (3.10+)",
+          "url": "https://docs.python.org/3/reference/compound_stmts.html#the-match-statement",
+          "resources": [
+            {
+              "label": "match statement",
+              "url": "https://docs.python.org/3/reference/compound_stmts.html#the-match-statement"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "exceptions as control flow (when to avoid)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/tutorial/controlflow.html",
+      "resources": [
+        {
+          "label": "Control flow",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html"
+        }
+      ]
+    },
+    {
+      "name": "Functions",
+      "children": [
+        {
+          "name": "def",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+          "resources": [
+            {
+              "label": "def",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "return values",
+          "url": "https://docs.python.org/3/reference/simple_stmts.html#the-return-statement",
+          "resources": [
+            {
+              "label": "return",
+              "url": "https://docs.python.org/3/reference/simple_stmts.html#the-return-statement"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "default parameters",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values",
+          "resources": [
+            {
+              "label": "Default args",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "args / kwargs",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists",
+          "resources": [
+            {
+              "label": "*args/**kwargs",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "keyword-only params (*, ...)",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#special-parameters",
+          "resources": [
+            {
+              "label": "Special parameters",
+              "url": "https://docs.python.org/3/tutorial/controlflow.html#special-parameters"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "scope (LEGB)",
+          "url": "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces",
+          "resources": [
+            {
+              "label": "Scopes and namespaces",
+              "url": "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "lambda",
+          "url": "https://docs.python.org/3/reference/expressions.html#lambda",
+          "resources": [
+            {
+              "label": "lambda",
+              "url": "https://docs.python.org/3/reference/expressions.html#lambda"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "higher-order functions (map/filter/reduce)",
+          "url": "https://docs.python.org/3/library/functions.html#map",
+          "resources": [
+            {
+              "label": "map",
+              "url": "https://docs.python.org/3/library/functions.html#map"
+            },
+            {
+              "label": "filter",
+              "url": "https://docs.python.org/3/library/functions.html#filter"
+            },
+            {
+              "label": "functools.reduce",
+              "url": "https://docs.python.org/3/library/functools.html#functools.reduce"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "decorators",
+          "url": "https://docs.python.org/3/glossary.html#term-decorator",
+          "resources": [
+            {
+              "label": "Decorator (glossary)",
+              "url": "https://docs.python.org/3/glossary.html#term-decorator"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "generators (yield)",
+          "children": [
+            {
+              "name": "generator expressions",
+              "url": "https://docs.python.org/3/reference/expressions.html#generator-expressions",
+              "resources": [
+                {
+                  "label": "Generator expressions",
+                  "url": "https://docs.python.org/3/reference/expressions.html#generator-expressions"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "yield from",
+              "url": "https://docs.python.org/3/reference/simple_stmts.html#the-yield-statement",
+              "resources": [
+                {
+                  "label": "yield / yield from",
+                  "url": "https://docs.python.org/3/reference/simple_stmts.html#the-yield-statement"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/tutorial/classes.html#generators",
+          "resources": [
+            {
+              "label": "Generators",
+              "url": "https://docs.python.org/3/tutorial/classes.html#generators"
+            }
+          ]
+        }
+      ],
+      "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+      "resources": [
+        {
+          "label": "Defining functions",
+          "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+        }
+      ]
+    },
+    {
+      "name": "OOP",
+      "children": [
+        {
+          "name": "class / instance",
+          "url": "https://docs.python.org/3/tutorial/classes.html",
+          "resources": [
+            {
+              "label": "Classes",
+              "url": "https://docs.python.org/3/tutorial/classes.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "__init__",
+          "url": "https://docs.python.org/3/reference/datamodel.html#object.__init__",
+          "resources": [
+            {
+              "label": "__init__",
+              "url": "https://docs.python.org/3/reference/datamodel.html#object.__init__"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "instance vs class attributes",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "methods (instance/class/static)",
+          "url": "https://docs.python.org/3/library/functions.html#classmethod",
+          "resources": [
+            {
+              "label": "classmethod",
+              "url": "https://docs.python.org/3/library/functions.html#classmethod"
+            },
+            {
+              "label": "staticmethod",
+              "url": "https://docs.python.org/3/library/functions.html#staticmethod"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "properties (@property)",
+          "url": "https://docs.python.org/3/library/functions.html#property",
+          "resources": [
+            {
+              "label": "property",
+              "url": "https://docs.python.org/3/library/functions.html#property"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "inheritance & super()",
+          "url": "https://docs.python.org/3/library/functions.html#super",
+          "resources": [
+            {
+              "label": "super",
+              "url": "https://docs.python.org/3/library/functions.html#super"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "multiple inheritance & MRO (concept)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "dunder methods",
+          "children": [
+            {
+              "name": "__repr__ / __str__",
+              "url": "https://docs.python.org/3/reference/datamodel.html#object.__repr__",
+              "resources": [
+                {
+                  "label": "__repr__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__repr__"
+                },
+                {
+                  "label": "__str__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__str__"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "__len__ / __iter__ / __next__",
+              "url": "https://docs.python.org/3/reference/datamodel.html#object.__len__",
+              "resources": [
+                {
+                  "label": "__len__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__len__"
+                },
+                {
+                  "label": "__iter__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__iter__"
+                },
+                {
+                  "label": "__next__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__next__"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "__getitem__",
+              "url": "https://docs.python.org/3/reference/datamodel.html#object.__getitem__",
+              "resources": [
+                {
+                  "label": "__getitem__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__getitem__"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "__eq__ / __hash__",
+              "url": "https://docs.python.org/3/reference/datamodel.html#object.__eq__",
+              "resources": [
+                {
+                  "label": "__eq__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__eq__"
+                },
+                {
+                  "label": "__hash__",
+                  "url": "https://docs.python.org/3/reference/datamodel.html#object.__hash__"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/reference/datamodel.html#special-method-names",
+          "resources": [
+            {
+              "label": "Special methods",
+              "url": "https://docs.python.org/3/reference/datamodel.html#special-method-names"
+            }
+          ]
+        },
+        {
+          "name": "dataclasses",
+          "children": [
+            {
+              "name": "@dataclass basics",
+              "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.dataclass",
+              "resources": [
+                {
+                  "label": "@dataclass",
+                  "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.dataclass"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "default_factory",
+              "url": "https://docs.python.org/3/library/dataclasses.html#default-factory-functions",
+              "resources": [
+                {
+                  "label": "default_factory",
+                  "url": "https://docs.python.org/3/library/dataclasses.html#default-factory-functions"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "frozen=True (immutability)",
+              "url": "https://docs.python.org/3/library/dataclasses.html#frozen-instances",
+              "resources": [
+                {
+                  "label": "frozen",
+                  "url": "https://docs.python.org/3/library/dataclasses.html#frozen-instances"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/dataclasses.html",
+          "resources": [
+            {
+              "label": "dataclasses",
+              "url": "https://docs.python.org/3/library/dataclasses.html"
+            }
+          ]
+        }
+      ],
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "resources": [
+        {
+          "label": "Classes",
+          "url": "https://docs.python.org/3/tutorial/classes.html"
+        }
+      ]
+    },
+    {
+      "name": "Modules & Packaging",
+      "children": [
+        {
+          "name": "import system",
+          "children": [
+            {
+              "name": "import vs from ... import ...",
+              "url": "https://docs.python.org/3/tutorial/modules.html#importing-from-a-package",
+              "resources": [
+                {
+                  "label": "Importing",
+                  "url": "https://docs.python.org/3/tutorial/modules.html#importing-from-a-package"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "relative imports",
+              "url": "https://docs.python.org/3/reference/import.html#package-relative-imports",
+              "resources": [
+                {
+                  "label": "Relative imports",
+                  "url": "https://docs.python.org/3/reference/import.html#package-relative-imports"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "__init__.py",
+              "url": "https://docs.python.org/3/tutorial/modules.html#packages",
+              "resources": [
+                {
+                  "label": "Packages",
+                  "url": "https://docs.python.org/3/tutorial/modules.html#packages"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "import side effects (avoid)",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/reference/import.html",
+          "resources": [
+            {
+              "label": "Import system",
+              "url": "https://docs.python.org/3/reference/import.html"
+            }
+          ]
+        },
+        {
+          "name": "virtualenv / venv",
+          "url": "https://docs.python.org/3/library/venv.html",
+          "resources": [
+            {
+              "label": "venv",
+              "url": "https://docs.python.org/3/library/venv.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "pip",
+          "url": "https://pip.pypa.io/en/stable/",
+          "resources": [
+            {
+              "label": "pip docs",
+              "url": "https://pip.pypa.io/en/stable/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "requirements.txt",
+          "url": "https://pip.pypa.io/en/stable/reference/requirements-file-format/",
+          "resources": [
+            {
+              "label": "Requirements file",
+              "url": "https://pip.pypa.io/en/stable/reference/requirements-file-format/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "pyproject.toml",
+          "children": [
+            {
+              "name": "build system concept",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "tool configs (black/ruff/pytest)",
+              "url": "https://packaging.python.org/en/latest/specifications/pyproject-toml/",
+              "resources": [
+                {
+                  "label": "pyproject.toml",
+                  "url": "https://packaging.python.org/en/latest/specifications/pyproject-toml/"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://packaging.python.org/en/latest/specifications/pyproject-toml/",
+          "resources": [
+            {
+              "label": "pyproject.toml spec",
+              "url": "https://packaging.python.org/en/latest/specifications/pyproject-toml/"
+            }
+          ]
+        },
+        {
+          "name": "Poetry / uv (optional)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "semantic versioning (concept)",
+          "url": "https://semver.org/",
+          "resources": [
+            {
+              "label": "SemVer",
+              "url": "https://semver.org/"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/tutorial/modules.html",
+      "resources": [
+        {
+          "label": "Modules",
+          "url": "https://docs.python.org/3/tutorial/modules.html"
+        }
+      ]
+    },
+    {
+      "name": "Errors & Debugging",
+      "children": [
+        {
+          "name": "try/except/else/finally",
+          "url": "https://docs.python.org/3/tutorial/errors.html#handling-exceptions",
+          "resources": [
+            {
+              "label": "Handling exceptions",
+              "url": "https://docs.python.org/3/tutorial/errors.html#handling-exceptions"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "raise",
+          "url": "https://docs.python.org/3/reference/simple_stmts.html#the-raise-statement",
+          "resources": [
+            {
+              "label": "raise",
+              "url": "https://docs.python.org/3/reference/simple_stmts.html#the-raise-statement"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "custom exceptions",
+          "url": "https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions",
+          "resources": [
+            {
+              "label": "User-defined exceptions",
+              "url": "https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "exception chaining (concept)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "tracebacks",
+          "url": "https://docs.python.org/3/library/traceback.html",
+          "resources": [
+            {
+              "label": "traceback module",
+              "url": "https://docs.python.org/3/library/traceback.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "pdb",
+          "url": "https://docs.python.org/3/library/pdb.html",
+          "resources": [
+            {
+              "label": "pdb",
+              "url": "https://docs.python.org/3/library/pdb.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "logging",
+          "children": [
+            {
+              "name": "log levels",
+              "url": "https://docs.python.org/3/library/logging.html#levels",
+              "resources": [
+                {
+                  "label": "Log levels",
+                  "url": "https://docs.python.org/3/library/logging.html#levels"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "structured logging concept",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/logging.html",
+          "resources": [
+            {
+              "label": "logging",
+              "url": "https://docs.python.org/3/library/logging.html"
+            }
+          ]
+        },
+        {
+          "name": "assertions (debug vs production)",
+          "url": "https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement",
+          "resources": [
+            {
+              "label": "assert",
+              "url": "https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/tutorial/errors.html",
+      "resources": [
+        {
+          "label": "Errors and Exceptions",
+          "url": "https://docs.python.org/3/tutorial/errors.html"
+        }
+      ]
+    },
+    {
+      "name": "I/O & Data Formats",
+      "children": [
+        {
+          "name": "files",
+          "children": [
+            {
+              "name": "with open(...) as f",
+              "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+              "resources": [
+                {
+                  "label": "open() and with",
+                  "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "text vs binary mode",
+              "url": "https://docs.python.org/3/library/functions.html#open",
+              "resources": [
+                {
+                  "label": "open() modes",
+                  "url": "https://docs.python.org/3/library/functions.html#open"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+          "resources": [
+            {
+              "label": "Files",
+              "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files"
+            }
+          ]
+        },
+        {
+          "name": "pathlib",
+          "url": "https://docs.python.org/3/library/pathlib.html",
+          "resources": [
+            {
+              "label": "pathlib",
+              "url": "https://docs.python.org/3/library/pathlib.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "JSON (json module)",
+          "url": "https://docs.python.org/3/library/json.html",
+          "resources": [
+            {
+              "label": "json",
+              "url": "https://docs.python.org/3/library/json.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "CSV (csv module)",
+          "url": "https://docs.python.org/3/library/csv.html",
+          "resources": [
+            {
+              "label": "csv",
+              "url": "https://docs.python.org/3/library/csv.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "datetime basics",
+          "url": "https://docs.python.org/3/library/datetime.html",
+          "resources": [
+            {
+              "label": "datetime",
+              "url": "https://docs.python.org/3/library/datetime.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "HTTP requests (requests)",
+          "url": "https://requests.readthedocs.io/en/latest/",
+          "resources": [
+            {
+              "label": "requests docs",
+              "url": "https://requests.readthedocs.io/en/latest/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "HTTP clients (httpx concept)",
+          "url": "https://www.python-httpx.org/",
+          "resources": [
+            {
+              "label": "httpx",
+              "url": "https://www.python-httpx.org/"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html",
+      "resources": [
+        {
+          "label": "Input/Output",
+          "url": "https://docs.python.org/3/tutorial/inputoutput.html"
+        }
+      ]
+    },
+    {
+      "name": "Concurrency",
+      "children": [
+        {
+          "name": "threading",
+          "url": "https://docs.python.org/3/library/threading.html",
+          "resources": [
+            {
+              "label": "threading",
+              "url": "https://docs.python.org/3/library/threading.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "multiprocessing",
+          "url": "https://docs.python.org/3/library/multiprocessing.html",
+          "resources": [
+            {
+              "label": "multiprocessing",
+              "url": "https://docs.python.org/3/library/multiprocessing.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "asyncio",
+          "url": "https://docs.python.org/3/library/asyncio.html",
+          "resources": [
+            {
+              "label": "asyncio",
+              "url": "https://docs.python.org/3/library/asyncio.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "async/await",
+          "url": "https://docs.python.org/3/reference/compound_stmts.html#async",
+          "resources": [
+            {
+              "label": "async/await syntax",
+              "url": "https://docs.python.org/3/reference/compound_stmts.html#async"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "tasks & gather (concept)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "timeouts & cancellation (concept)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        },
+        {
+          "name": "GIL (concept)",
+          "url": "https://docs.python.org/3/glossary.html#term-global-interpreter-lock",
+          "resources": [
+            {
+              "label": "GIL (glossary)",
+              "url": "https://docs.python.org/3/glossary.html#term-global-interpreter-lock"
+            }
+          ],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/library/concurrency.html",
+      "resources": [
+        {
+          "label": "Concurrency overview",
+          "url": "https://docs.python.org/3/library/concurrency.html"
+        }
+      ]
+    },
+    {
+      "name": "Testing",
+      "children": [
+        {
+          "name": "unittest",
+          "url": "https://docs.python.org/3/library/unittest.html",
+          "resources": [
+            {
+              "label": "unittest",
+              "url": "https://docs.python.org/3/library/unittest.html"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "pytest",
+          "children": [
+            {
+              "name": "fixtures",
+              "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+              "resources": [
+                {
+                  "label": "pytest fixtures",
+                  "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "parametrize",
+              "url": "https://docs.pytest.org/en/stable/how-to/parametrize.html",
+              "resources": [
+                {
+                  "label": "parametrize",
+                  "url": "https://docs.pytest.org/en/stable/how-to/parametrize.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "markers",
+              "url": "https://docs.pytest.org/en/stable/how-to/mark.html",
+              "resources": [
+                {
+                  "label": "markers",
+                  "url": "https://docs.pytest.org/en/stable/how-to/mark.html"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.pytest.org/en/stable/",
+          "resources": [
+            {
+              "label": "pytest",
+              "url": "https://docs.pytest.org/en/stable/"
+            }
+          ]
+        },
+        {
+          "name": "mocking",
+          "children": [
+            {
+              "name": "unittest.mock",
+              "url": "https://docs.python.org/3/library/unittest.mock.html",
+              "resources": [
+                {
+                  "label": "unittest.mock",
+                  "url": "https://docs.python.org/3/library/unittest.mock.html"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "patching imports correctly (concept)",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/unittest.mock.html",
+          "resources": [
+            {
+              "label": "unittest.mock",
+              "url": "https://docs.python.org/3/library/unittest.mock.html"
+            }
+          ]
+        },
+        {
+          "name": "API testing (requests/Supertest equivalent concept)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "resources": [
+        {
+          "label": "unittest",
+          "url": "https://docs.python.org/3/library/unittest.html"
+        }
+      ]
+    },
+    {
+      "name": "Quality & Tooling",
+      "children": [
+        {
+          "name": "type hints",
+          "children": [
+            {
+              "name": "annotations",
+              "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+              "resources": [
+                {
+                  "label": "Function defs",
+                  "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Optional / Union",
+              "url": "https://docs.python.org/3/library/typing.html#typing.Optional",
+              "resources": [
+                {
+                  "label": "Optional",
+                  "url": "https://docs.python.org/3/library/typing.html#typing.Optional"
+                },
+                {
+                  "label": "Union",
+                  "url": "https://docs.python.org/3/library/typing.html#typing.Union"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "list[str] modern types",
+              "url": "https://docs.python.org/3/library/stdtypes.html#types-genericalias",
+              "resources": [
+                {
+                  "label": "GenericAlias (PEP 585)",
+                  "url": "https://docs.python.org/3/library/stdtypes.html#types-genericalias"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Protocols (concept)",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://docs.python.org/3/library/typing.html",
+          "resources": [
+            {
+              "label": "typing",
+              "url": "https://docs.python.org/3/library/typing.html"
+            }
+          ]
+        },
+        {
+          "name": "mypy / pyright",
+          "url": "https://example-python.com",
+          "resources": [
+            {
+              "label": "mypy",
+              "url": "https://mypy.readthedocs.io/en/stable/"
+            },
+            {
+              "label": "pyright",
+              "url": "https://microsoft.github.io/pyright/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "black",
+          "url": "https://black.readthedocs.io/en/stable/",
+          "resources": [
+            {
+              "label": "Black",
+              "url": "https://black.readthedocs.io/en/stable/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "ruff",
+          "url": "https://docs.astral.sh/ruff/",
+          "resources": [
+            {
+              "label": "Ruff",
+              "url": "https://docs.astral.sh/ruff/"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "pre-commit hooks (concept)",
+          "url": "https://example-python.com",
+          "resources": [],
+          "children": []
+        }
+      ],
+      "url": "https://docs.python.org/3/",
+      "resources": [
+        {
+          "label": "Python Docs",
+          "url": "https://docs.python.org/3/"
+        }
+      ]
+    },
+    {
+      "name": "Web & Ecosystem (Balanced)",
+      "children": [
+        {
+          "name": "Flask",
+          "children": [
+            {
+              "name": "routing",
+              "url": "https://flask.palletsprojects.com/en/stable/quickstart/#routing",
+              "resources": [
+                {
+                  "label": "Flask routing",
+                  "url": "https://flask.palletsprojects.com/en/stable/quickstart/#routing"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "request/response lifecycle",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "blueprints",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "extensions ecosystem",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "WSGI deployment concept",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://flask.palletsprojects.com/en/stable/",
+          "resources": [
+            {
+              "label": "Flask",
+              "url": "https://flask.palletsprojects.com/en/stable/"
+            }
+          ]
+        },
+        {
+          "name": "FastAPI",
+          "children": [
+            {
+              "name": "routing & dependency injection",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Pydantic models",
+              "url": "https://docs.pydantic.dev/latest/",
+              "resources": [
+                {
+                  "label": "Pydantic",
+                  "url": "https://docs.pydantic.dev/latest/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "OpenAPI / Swagger docs",
+              "url": "https://fastapi.tiangolo.com/features/#automatic-docs",
+              "resources": [
+                {
+                  "label": "FastAPI automatic docs",
+                  "url": "https://fastapi.tiangolo.com/features/#automatic-docs"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "async endpoints",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "ASGI deployment concept",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://fastapi.tiangolo.com/",
+          "resources": [
+            {
+              "label": "FastAPI",
+              "url": "https://fastapi.tiangolo.com/"
+            }
+          ]
+        },
+        {
+          "name": "Django",
+          "children": [
+            {
+              "name": "MTV pattern",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "ORM",
+              "url": "https://docs.djangoproject.com/en/stable/topics/db/queries/",
+              "resources": [
+                {
+                  "label": "Django ORM queries",
+                  "url": "https://docs.djangoproject.com/en/stable/topics/db/queries/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "migrations",
+              "url": "https://docs.djangoproject.com/en/stable/topics/migrations/",
+              "resources": [
+                {
+                  "label": "Django migrations",
+                  "url": "https://docs.djangoproject.com/en/stable/topics/migrations/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "admin",
+              "url": "https://docs.djangoproject.com/en/stable/ref/contrib/admin/",
+              "resources": [
+                {
+                  "label": "Django admin",
+                  "url": "https://docs.djangoproject.com/en/stable/ref/contrib/admin/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "auth system",
+              "url": "https://docs.djangoproject.com/en/stable/topics/auth/",
+              "resources": [
+                {
+                  "label": "Django auth",
+                  "url": "https://docs.djangoproject.com/en/stable/topics/auth/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "middleware",
+              "url": "https://docs.djangoproject.com/en/stable/topics/http/middleware/",
+              "resources": [
+                {
+                  "label": "Django middleware",
+                  "url": "https://docs.djangoproject.com/en/stable/topics/http/middleware/"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://docs.djangoproject.com/en/stable/",
+          "resources": [
+            {
+              "label": "Django docs",
+              "url": "https://docs.djangoproject.com/en/stable/"
+            }
+          ]
+        },
+        {
+          "name": "Databases",
+          "children": [
+            {
+              "name": "SQLAlchemy",
+              "url": "https://docs.sqlalchemy.org/en/20/",
+              "resources": [
+                {
+                  "label": "SQLAlchemy",
+                  "url": "https://docs.sqlalchemy.org/en/20/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Django ORM",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "Alembic migrations",
+              "url": "https://alembic.sqlalchemy.org/en/latest/",
+              "resources": [
+                {
+                  "label": "Alembic",
+                  "url": "https://alembic.sqlalchemy.org/en/latest/"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-python.com",
+          "resources": []
+        },
+        {
+          "name": "Auth & Security",
+          "children": [
+            {
+              "name": "sessions vs JWT",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            },
+            {
+              "name": "cookies (HttpOnly/SameSite/Secure)",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie",
+              "resources": [
+                {
+                  "label": "Set-Cookie",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "CORS concept",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+              "resources": [
+                {
+                  "label": "MDN CORS",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "rate limiting concept",
+              "url": "https://example-python.com",
+              "resources": [],
+              "children": []
+            }
+          ],
+          "url": "https://example-python.com",
+          "resources": []
+        },
+        {
+          "name": "Deployment",
+          "children": [
+            {
+              "name": "Gunicorn (WSGI)",
+              "url": "https://docs.gunicorn.org/en/stable/",
+              "resources": [
+                {
+                  "label": "Gunicorn",
+                  "url": "https://docs.gunicorn.org/en/stable/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Uvicorn (ASGI)",
+              "url": "https://www.uvicorn.org/",
+              "resources": [
+                {
+                  "label": "Uvicorn",
+                  "url": "https://www.uvicorn.org/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Docker basics",
+              "url": "https://docs.docker.com/language/python/",
+              "resources": [
+                {
+                  "label": "Docker Python guide",
+                  "url": "https://docs.docker.com/language/python/"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "reverse proxy (Nginx concept)",
+              "url": "https://nginx.org/en/docs/",
+              "resources": [
+                {
+                  "label": "Nginx docs",
+                  "url": "https://nginx.org/en/docs/"
+                }
+              ],
+              "children": []
+            }
+          ],
+          "url": "https://example-python.com",
+          "resources": []
+        }
+      ],
+      "url": "https://www.python.org/",
+      "resources": [
+        {
+          "label": "python.org",
+          "url": "https://www.python.org/"
+        }
+      ]
+    }
+  ],
+  "url": "https://docs.python.org/3/",
+  "resources": [
+    {
+      "label": "Python Docs",
+      "url": "https://docs.python.org/3/"
+    }
+  ]
+}

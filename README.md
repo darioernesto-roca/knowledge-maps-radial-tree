@@ -53,6 +53,7 @@ Rules:
 2. Every node is `{ "name": string }`.
 3. Branch nodes include `children` as an array of nodes.
 4. Leaf nodes only need `name`.
+5. Optional metadata per node: `url` (primary link) and `resources` (array of `{ label, url }`).
 
 The rendering logic in `app.js` reads this hierarchy and builds a radial tree with `d3.hierarchy` + `d3.tree`, so all languages must keep this structure.
 
@@ -84,7 +85,8 @@ rust: {
 What each field does:
 
 - `label`: button label in the UI.
-- `jsonPath`: data source loaded via `fetch`.
+- `jsonPath`: roadmap hierarchy loaded via `fetch`.
+- `urlPath`: URL metadata tree loaded via `fetch` and merged into the roadmap by node path.
 - `title`: page `<title>` + on-page heading.
 - `description`: subtitle text shown under heading.
 
@@ -115,6 +117,7 @@ Confirm:
 For a new language, the minimum expected files changed are:
 
 - `data/<language>.json`
+- `data/<language>-urls.json`
 - `app.js`
 - `README.md` (update supported languages + instructions)
 

@@ -38,7 +38,11 @@ const TOPICS = {
 const DEFAULT_TOPIC = "python";
 
 const THEME_STORAGE_KEY = "knowledge-map-theme";
+const ZOOM_SCALE_MIN = 0.6;
+const ZOOM_SCALE_MAX = 6;
+const ZOOM_STEP = 1.2;
 let currentTopic = null;
+let currentZoomTransform = d3.zoomIdentity;
 
 function getCssVar(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -82,6 +86,28 @@ function initializeTheme() {
   });
 }
 
+function initializeZoomControls() {
+  const zoomInButton = document.getElementById("zoom-in");
+  const zoomOutButton = document.getElementById("zoom-out");
+  const zoomResetButton = document.getElementById("zoom-reset");
+
+  if (!zoomInButton || !zoomOutButton || !zoomResetButton) return;
+
+  zoomInButton.addEventListener("click", () => {
+    const svg = document.querySelector("#chart-container svg");
+    svg?.dispatchEvent(new CustomEvent("chart-zoom-in"));
+  });
+
+  zoomOutButton.addEventListener("click", () => {
+    const svg = document.querySelector("#chart-container svg");
+    svg?.dispatchEvent(new CustomEvent("chart-zoom-out"));
+  });
+
+  zoomResetButton.addEventListener("click", () => {
+    const svg = document.querySelector("#chart-container svg");
+    svg?.dispatchEvent(new CustomEvent("chart-zoom-reset"));
+  });
+}
 
 function getTopicFromURL() {
   const topic = new URLSearchParams(window.location.search).get("topic");
@@ -122,7 +148,10 @@ function renderButtons(activeTopic) {
     button.textContent = config.label;
     button.setAttribute("aria-pressed", String(topic === activeTopic));
     button.addEventListener("click", () => {
-      if (topic !== activeTopic) render(topic);
+      if (topic !== activeTopic) {
+        currentZoomTransform = d3.zoomIdentity;
+        render(topic);
+      }
     });
     group.appendChild(button);
   }
@@ -141,7 +170,9 @@ function Tree(data, {
   r = 3,
   halo = "#fff",
   haloWidth = 3,
-  textFill = "currentColor"
+  textFill = "currentColor",
+  initialTransform = d3.zoomIdentity,
+  onZoomChange = () => {}
 } = {}) {
   const radius = Math.min(width - margin * 2, height - margin * 2) / 2;
   const root = d3.hierarchy(data);
@@ -157,9 +188,13 @@ function Tree(data, {
     .attr("height", height)
     .attr("style", "max-width: 100%; height: auto;")
     .attr("font-family", "sans-serif")
-    .attr("font-size", 10);
+    .attr("font-size", 10)
+    .attr("role", "img")
+    .attr("aria-label", "Zoomable radial knowledge map");
 
-  svg
+  const zoomLayer = svg.append("g");
+
+  zoomLayer
     .append("g")
     .attr("fill", "none")
     .attr("stroke", stroke)
@@ -170,7 +205,7 @@ function Tree(data, {
     .join("path")
     .attr("d", d3.linkRadial().angle((d) => d.x).radius((d) => d.y));
 
-  const node = svg
+  const node = zoomLayer
     .append("g")
     .selectAll("g")
     .data(descendants)
@@ -204,6 +239,28 @@ function Tree(data, {
       .style("text-decoration", (d) => (d.data.url ? "underline" : "none"))
       .text((d, i) => labels[i]);
   }
+
+  const zoomBehavior = d3.zoom()
+    .scaleExtent([ZOOM_SCALE_MIN, ZOOM_SCALE_MAX])
+    .on("zoom", (event) => {
+      zoomLayer.attr("transform", event.transform);
+      onZoomChange(event.transform);
+    });
+
+  svg.call(zoomBehavior).on("dblclick.zoom", null);
+  svg.call(zoomBehavior.transform, initialTransform);
+
+  svg.node().addEventListener("chart-zoom-in", () => {
+    svg.transition().duration(150).call(zoomBehavior.scaleBy, ZOOM_STEP);
+  });
+
+  svg.node().addEventListener("chart-zoom-out", () => {
+    svg.transition().duration(150).call(zoomBehavior.scaleBy, 1 / ZOOM_STEP);
+  });
+
+  svg.node().addEventListener("chart-zoom-reset", () => {
+    svg.transition().duration(200).call(zoomBehavior.transform, d3.zoomIdentity);
+  });
 
   return svg.node();
 }
@@ -291,7 +348,11 @@ async function render(topic) {
       stroke: getCssVar("--tree-stroke"),
       fill: getCssVar("--tree-fill"),
       halo: getCssVar("--tree-halo"),
-      textFill: getCssVar("--tree-label")
+      textFill: getCssVar("--tree-label"),
+      initialTransform: currentZoomTransform,
+      onZoomChange: (transform) => {
+        currentZoomTransform = transform;
+      }
     });
 
     const container = document.getElementById("chart-container");
@@ -304,4 +365,5 @@ async function render(topic) {
 }
 
 initializeTheme();
+initializeZoomControls();
 render(getTopicFromURL());

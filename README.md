@@ -10,6 +10,16 @@ npx http-server
 
 Then open `http://localhost:8080` (or the port shown by `http-server`).
 
+## Zoom and pan navigation
+
+The radial map supports interactive navigation so users can inspect dense text without changing base font size:
+
+- **Mouse wheel / trackpad pinch** to zoom in and out.
+- **Drag** to pan the map.
+- Toolbar controls: **−** (zoom out), **Reset** (return to default view), **+** (zoom in).
+
+Zoom state is preserved while switching theme mode for the same topic.
+
 ## Supported language maps
 
 The app currently ships with:
@@ -137,6 +147,7 @@ Confirm:
 - The new button appears.
 - The title/description updates.
 - The radial tree renders without errors.
+- Zoom controls (`−`, `Reset`, `+`) work and wheel/pinch + drag interactions respond.
 
 ### 5) Commit both code + data changes
 
@@ -152,6 +163,7 @@ For a new language, the minimum expected files changed are:
 ## Implementation notes
 
 - Rendering happens in `Tree(...)` within `app.js`.
+- The SVG chart uses D3 zoom with scale limits and panning support.
 - Topic selection is URL-driven (`topic` query param).
 - Failed JSON loads are handled with a user-facing error message.
 - Main map JSON and URL metadata JSON are fetched together and merged by node path at runtime.

@@ -164,6 +164,7 @@ For a new language, the minimum expected files changed are:
 
 - Rendering happens in `Tree(...)` within `app.js`.
 - The SVG chart uses D3 zoom with scale limits and panning support.
+- The chart SVG is responsive (`width="100%"`, `height="auto"`) and scales to the available horizontal space.
 - Topic selection is URL-driven (`topic` query param).
 - Failed JSON loads are handled with a user-facing error message.
 - Main map JSON and URL metadata JSON are fetched together and merged by node path at runtime.

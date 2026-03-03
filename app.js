@@ -184,9 +184,10 @@ function Tree(data, {
 
   const svg = d3.create("svg")
     .attr("viewBox", [-margin - radius, -margin - radius, width, height])
-    .attr("width", width)
-    .attr("height", height)
-    .attr("style", "max-width: 100%; height: auto;")
+    .attr("width", "100%")
+    .attr("height", "auto")
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .attr("style", "width: 100%; height: auto; display: block;")
     .attr("font-family", "sans-serif")
     .attr("font-size", 10)
     .attr("role", "img")

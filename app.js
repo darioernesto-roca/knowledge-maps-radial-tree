@@ -4,6 +4,7 @@ const TOPICS = {
   python: {
     label: "Python",
     jsonPath: "data/python.json",
+    urlPath: "data/python-urls.json",
     title: "Python Knowledge Map",
     description:
       "A practical Python roadmap covering core syntax, data structures, functions, object-oriented programming, testing, packaging, and common ecosystem tooling."
@@ -11,6 +12,7 @@ const TOPICS = {
   node: {
     label: "Node.js",
     jsonPath: "data/node.json",
+    urlPath: "data/nodejs-urls.json",
     title: "Node.js Knowledge Map",
     description:
       "A Node.js learning map focused on runtime fundamentals, modules, asynchronous programming, streams, APIs, and production-ready backend practices."
@@ -18,6 +20,7 @@ const TOPICS = {
   java: {
     label: "Java",
     jsonPath: "data/java.json",
+    urlPath: "data/java-urls.json",
     title: "Java Knowledge Map",
     description:
       "A Java topic map spanning JVM foundations, object-oriented design, collections, exceptions, modern Java features, build tooling, and enterprise development."
@@ -25,6 +28,7 @@ const TOPICS = {
   javascript: {
     label: "JavaScript",
     jsonPath: "data/javascript.json",
+    urlPath: "data/javascript-urls.json",
     title: "JavaScript Knowledge Map",
     description:
       "A JavaScript learning map covering language fundamentals, asynchronous patterns, DOM APIs, modules, tooling, and security/performance best practices."
@@ -34,7 +38,11 @@ const TOPICS = {
 const DEFAULT_TOPIC = "python";
 
 const THEME_STORAGE_KEY = "knowledge-map-theme";
+const ZOOM_SCALE_MIN = 0.6;
+const ZOOM_SCALE_MAX = 6;
+const ZOOM_STEP = 1.2;
 let currentTopic = null;
+let currentZoomTransform = d3.zoomIdentity;
 
 function getCssVar(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -78,6 +86,28 @@ function initializeTheme() {
   });
 }
 
+function initializeZoomControls() {
+  const zoomInButton = document.getElementById("zoom-in");
+  const zoomOutButton = document.getElementById("zoom-out");
+  const zoomResetButton = document.getElementById("zoom-reset");
+
+  if (!zoomInButton || !zoomOutButton || !zoomResetButton) return;
+
+  zoomInButton.addEventListener("click", () => {
+    const svg = document.querySelector("#chart-container svg");
+    svg?.dispatchEvent(new CustomEvent("chart-zoom-in"));
+  });
+
+  zoomOutButton.addEventListener("click", () => {
+    const svg = document.querySelector("#chart-container svg");
+    svg?.dispatchEvent(new CustomEvent("chart-zoom-out"));
+  });
+
+  zoomResetButton.addEventListener("click", () => {
+    const svg = document.querySelector("#chart-container svg");
+    svg?.dispatchEvent(new CustomEvent("chart-zoom-reset"));
+  });
+}
 
 function getTopicFromURL() {
   const topic = new URLSearchParams(window.location.search).get("topic");
@@ -118,7 +148,10 @@ function renderButtons(activeTopic) {
     button.textContent = config.label;
     button.setAttribute("aria-pressed", String(topic === activeTopic));
     button.addEventListener("click", () => {
-      if (topic !== activeTopic) render(topic);
+      if (topic !== activeTopic) {
+        currentZoomTransform = d3.zoomIdentity;
+        render(topic);
+      }
     });
     group.appendChild(button);
   }
@@ -137,7 +170,9 @@ function Tree(data, {
   r = 3,
   halo = "#fff",
   haloWidth = 3,
-  textFill = "currentColor"
+  textFill = "currentColor",
+  initialTransform = d3.zoomIdentity,
+  onZoomChange = () => {}
 } = {}) {
   const radius = Math.min(width - margin * 2, height - margin * 2) / 2;
   const root = d3.hierarchy(data);
@@ -153,9 +188,13 @@ function Tree(data, {
     .attr("height", height)
     .attr("style", "max-width: 100%; height: auto;")
     .attr("font-family", "sans-serif")
-    .attr("font-size", 10);
+    .attr("font-size", 10)
+    .attr("role", "img")
+    .attr("aria-label", "Zoomable radial knowledge map");
 
-  svg
+  const zoomLayer = svg.append("g");
+
+  zoomLayer
     .append("g")
     .attr("fill", "none")
     .attr("stroke", stroke)
@@ -166,7 +205,7 @@ function Tree(data, {
     .join("path")
     .attr("d", d3.linkRadial().angle((d) => d.x).radius((d) => d.y));
 
-  const node = svg
+  const node = zoomLayer
     .append("g")
     .selectAll("g")
     .data(descendants)
@@ -180,7 +219,13 @@ function Tree(data, {
   }
 
   if (labels) {
-    node
+    const labelContainer = node
+      .append("a")
+      .attr("href", (d) => d.data.url || null)
+      .attr("target", (d) => (d.data.url ? "_blank" : null))
+      .attr("rel", (d) => (d.data.url ? "noopener noreferrer" : null));
+
+    labelContainer
       .append("text")
       .attr("transform", (d) => `rotate(${d.x >= Math.PI ? 180 : 0})`)
       .attr("dy", "0.32em")
@@ -190,10 +235,82 @@ function Tree(data, {
       .attr("stroke", halo)
       .attr("stroke-width", haloWidth)
       .attr("fill", textFill)
+      .style("cursor", (d) => (d.data.url ? "pointer" : "default"))
+      .style("text-decoration", (d) => (d.data.url ? "underline" : "none"))
       .text((d, i) => labels[i]);
   }
 
+  const zoomBehavior = d3.zoom()
+    .scaleExtent([ZOOM_SCALE_MIN, ZOOM_SCALE_MAX])
+    .on("zoom", (event) => {
+      zoomLayer.attr("transform", event.transform);
+      onZoomChange(event.transform);
+    });
+
+  svg.call(zoomBehavior).on("dblclick.zoom", null);
+  svg.call(zoomBehavior.transform, initialTransform);
+
+  svg.node().addEventListener("chart-zoom-in", () => {
+    svg.transition().duration(150).call(zoomBehavior.scaleBy, ZOOM_STEP);
+  });
+
+  svg.node().addEventListener("chart-zoom-out", () => {
+    svg.transition().duration(150).call(zoomBehavior.scaleBy, 1 / ZOOM_STEP);
+  });
+
+  svg.node().addEventListener("chart-zoom-reset", () => {
+    svg.transition().duration(200).call(zoomBehavior.transform, d3.zoomIdentity);
+  });
+
   return svg.node();
+}
+
+function buildUrlLookup(urlTree) {
+  const lookup = new Map();
+
+  function walk(node, parentPath = "") {
+    const currentPath = parentPath ? `${parentPath} > ${node.name}` : node.name;
+
+    lookup.set(currentPath, {
+      url: node.url,
+      resources: Array.isArray(node.resources) ? node.resources : undefined
+    });
+
+    if (Array.isArray(node.children)) {
+      for (const child of node.children) {
+        walk(child, currentPath);
+      }
+    }
+  }
+
+  walk(urlTree);
+  return lookup;
+}
+
+function mergeUrlsIntoTree(topicTree, urlTree) {
+  const lookup = buildUrlLookup(urlTree);
+
+  function walk(node, parentPath = "") {
+    const currentPath = parentPath ? `${parentPath} > ${node.name}` : node.name;
+    const metadata = lookup.get(currentPath);
+
+    if (metadata?.url) {
+      node.url = metadata.url;
+    }
+
+    if (metadata?.resources) {
+      node.resources = metadata.resources;
+    }
+
+    if (Array.isArray(node.children)) {
+      for (const child of node.children) {
+        walk(child, currentPath);
+      }
+    }
+  }
+
+  walk(topicTree);
+  return topicTree;
 }
 
 async function render(topic) {
@@ -207,12 +324,21 @@ async function render(topic) {
   setLoading(`Loading ${config.label} map…`);
 
   try {
-    const response = await fetch(config.jsonPath);
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+    const [topicResponse, urlResponse] = await Promise.all([
+      fetch(config.jsonPath),
+      fetch(config.urlPath)
+    ]);
+
+    if (!topicResponse.ok) {
+      throw new Error(`HTTP ${topicResponse.status}`);
     }
 
-    const data = await response.json();
+    if (!urlResponse.ok) {
+      throw new Error(`HTTP ${urlResponse.status}`);
+    }
+
+    const [data, urlData] = await Promise.all([topicResponse.json(), urlResponse.json()]);
+    mergeUrlsIntoTree(data, urlData);
     const chart = Tree(data, {
       label: (d) => d.name,
       title: (d, node) => node.ancestors().reverse().map((ancestor) => ancestor.data.name).join(" > "),
@@ -222,7 +348,11 @@ async function render(topic) {
       stroke: getCssVar("--tree-stroke"),
       fill: getCssVar("--tree-fill"),
       halo: getCssVar("--tree-halo"),
-      textFill: getCssVar("--tree-label")
+      textFill: getCssVar("--tree-label"),
+      initialTransform: currentZoomTransform,
+      onZoomChange: (transform) => {
+        currentZoomTransform = transform;
+      }
     });
 
     const container = document.getElementById("chart-container");
@@ -235,4 +365,5 @@ async function render(topic) {
 }
 
 initializeTheme();
+initializeZoomControls();
 render(getTopicFromURL());

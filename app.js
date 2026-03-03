@@ -4,6 +4,7 @@ const TOPICS = {
   python: {
     label: "Python",
     jsonPath: "data/python.json",
+    urlPath: "data/python-urls.json",
     title: "Python Knowledge Map",
     description:
       "A practical Python roadmap covering core syntax, data structures, functions, object-oriented programming, testing, packaging, and common ecosystem tooling."
@@ -11,6 +12,7 @@ const TOPICS = {
   node: {
     label: "Node.js",
     jsonPath: "data/node.json",
+    urlPath: "data/nodejs-urls.json",
     title: "Node.js Knowledge Map",
     description:
       "A Node.js learning map focused on runtime fundamentals, modules, asynchronous programming, streams, APIs, and production-ready backend practices."
@@ -18,6 +20,7 @@ const TOPICS = {
   java: {
     label: "Java",
     jsonPath: "data/java.json",
+    urlPath: "data/java-urls.json",
     title: "Java Knowledge Map",
     description:
       "A Java topic map spanning JVM foundations, object-oriented design, collections, exceptions, modern Java features, build tooling, and enterprise development."
@@ -25,6 +28,7 @@ const TOPICS = {
   javascript: {
     label: "JavaScript",
     jsonPath: "data/javascript.json",
+    urlPath: "data/javascript-urls.json",
     title: "JavaScript Knowledge Map",
     description:
       "A JavaScript learning map covering language fundamentals, asynchronous patterns, DOM APIs, modules, tooling, and security/performance best practices."
@@ -180,7 +184,13 @@ function Tree(data, {
   }
 
   if (labels) {
-    node
+    const labelContainer = node
+      .append("a")
+      .attr("href", (d) => d.data.url || null)
+      .attr("target", (d) => (d.data.url ? "_blank" : null))
+      .attr("rel", (d) => (d.data.url ? "noopener noreferrer" : null));
+
+    labelContainer
       .append("text")
       .attr("transform", (d) => `rotate(${d.x >= Math.PI ? 180 : 0})`)
       .attr("dy", "0.32em")
@@ -190,10 +200,60 @@ function Tree(data, {
       .attr("stroke", halo)
       .attr("stroke-width", haloWidth)
       .attr("fill", textFill)
+      .style("cursor", (d) => (d.data.url ? "pointer" : "default"))
+      .style("text-decoration", (d) => (d.data.url ? "underline" : "none"))
       .text((d, i) => labels[i]);
   }
 
   return svg.node();
+}
+
+function buildUrlLookup(urlTree) {
+  const lookup = new Map();
+
+  function walk(node, parentPath = "") {
+    const currentPath = parentPath ? `${parentPath} > ${node.name}` : node.name;
+
+    lookup.set(currentPath, {
+      url: node.url,
+      resources: Array.isArray(node.resources) ? node.resources : undefined
+    });
+
+    if (Array.isArray(node.children)) {
+      for (const child of node.children) {
+        walk(child, currentPath);
+      }
+    }
+  }
+
+  walk(urlTree);
+  return lookup;
+}
+
+function mergeUrlsIntoTree(topicTree, urlTree) {
+  const lookup = buildUrlLookup(urlTree);
+
+  function walk(node, parentPath = "") {
+    const currentPath = parentPath ? `${parentPath} > ${node.name}` : node.name;
+    const metadata = lookup.get(currentPath);
+
+    if (metadata?.url) {
+      node.url = metadata.url;
+    }
+
+    if (metadata?.resources) {
+      node.resources = metadata.resources;
+    }
+
+    if (Array.isArray(node.children)) {
+      for (const child of node.children) {
+        walk(child, currentPath);
+      }
+    }
+  }
+
+  walk(topicTree);
+  return topicTree;
 }
 
 async function render(topic) {
@@ -207,12 +267,21 @@ async function render(topic) {
   setLoading(`Loading ${config.label} map…`);
 
   try {
-    const response = await fetch(config.jsonPath);
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+    const [topicResponse, urlResponse] = await Promise.all([
+      fetch(config.jsonPath),
+      fetch(config.urlPath)
+    ]);
+
+    if (!topicResponse.ok) {
+      throw new Error(`HTTP ${topicResponse.status}`);
     }
 
-    const data = await response.json();
+    if (!urlResponse.ok) {
+      throw new Error(`HTTP ${urlResponse.status}`);
+    }
+
+    const [data, urlData] = await Promise.all([topicResponse.json(), urlResponse.json()]);
+    mergeUrlsIntoTree(data, urlData);
     const chart = Tree(data, {
       label: (d) => d.name,
       title: (d, node) => node.ancestors().reverse().map((ancestor) => ancestor.data.name).join(" > "),

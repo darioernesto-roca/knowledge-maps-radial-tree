@@ -14,10 +14,10 @@ Then open `http://localhost:8080` (or the port shown by `http-server`).
 
 The app currently ships with:
 
-- Python (`data/python.json`)
-- Node.js (`data/node.json`)
-- Java (`data/java.json`)
-- JavaScript (`data/javascript.json`)
+- Python (`data/python.json` + `data/python-urls.json`)
+- Node.js (`data/node.json` + `data/nodejs-urls.json`)
+- Java (`data/java.json` + `data/java-urls.json`)
+- JavaScript (`data/javascript.json` + `data/javascript-urls.json`)
 
 You can switch maps via the topic buttons or by URL query param:
 
@@ -57,6 +57,26 @@ Rules:
 
 The rendering logic in `app.js` reads this hierarchy and builds a radial tree with `d3.hierarchy` + `d3.tree`, so all languages must keep this structure.
 
+### URL metadata files (`*-urls.json`)
+
+Each topic now also has a companion URL metadata file (for example, `data/javascript-urls.json`).
+
+- The URL file mirrors the same hierarchy/paths as the main map file.
+- The app merges URL metadata into the main tree at runtime by full path (`Root > Category > Topic`).
+- Node labels with a `url` become clickable in the radial map and open in a new tab.
+
+Example URL metadata node:
+
+```json
+{
+  "name": "Array.map()",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+  "resources": [
+    { "label": "MDN", "url": "https://developer.mozilla.org/..." }
+  ]
+}
+```
+
 ---
 
 ## How to add a new language map manually (developer guide)
@@ -69,6 +89,11 @@ Create a new file under `data/`:
 
 Use the same hierarchical structure shown above. Keep naming concise and topic-focused.
 
+Create a companion URL metadata file too:
+
+- Example: `data/rust-urls.json`
+- Keep node names/paths aligned with `data/rust.json` so URL merging works correctly.
+
 ### 2) Register the language in `app.js`
 
 Open `app.js` and add a new entry in the `TOPICS` object:
@@ -77,6 +102,7 @@ Open `app.js` and add a new entry in the `TOPICS` object:
 rust: {
   label: "Rust",
   jsonPath: "data/rust.json",
+  urlPath: "data/rust-urls.json",
   title: "Rust Knowledge Map",
   description: "A Rust roadmap covering ownership, borrowing, lifetimes, traits, async, and tooling."
 }
@@ -128,4 +154,5 @@ For a new language, the minimum expected files changed are:
 - Rendering happens in `Tree(...)` within `app.js`.
 - Topic selection is URL-driven (`topic` query param).
 - Failed JSON loads are handled with a user-facing error message.
-- No schema transformation step exists; JSON shape is consumed directly.
+- Main map JSON and URL metadata JSON are fetched together and merged by node path at runtime.
+- Labels are rendered as links when a node has a `url`.

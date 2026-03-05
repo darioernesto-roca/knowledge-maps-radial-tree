@@ -57,6 +57,18 @@ body {
   background: var(--bg);
 }
 
+.top-header p {
+  color: var(--muted-text);
+  font-size: 14px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.top-header p a {
+  color: var(--button-text);
+  text-decoration: underline;
+}
+
 .toolbar {
   display: flex;
   gap: 12px;
@@ -65,7 +77,6 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 16px;
-  max-width: 1152px;
 }
 
 #topic-buttons {
@@ -130,12 +141,10 @@ body {
 #topic-title {
   margin: 0 auto;
   margin-bottom: 8px;
-  max-width: 1152px;
 }
 
 #topic-description {
   color: var(--muted-text);
-  max-width: 1152px;
   margin: 0 auto;
   margin-bottom: 20px;
 }

@@ -114,6 +114,21 @@ function getTopicFromURL() {
   return topic && TOPICS[topic] ? topic : DEFAULT_TOPIC;
 }
 
+
+function sanitizeExternalUrl(value) {
+  if (typeof value !== "string") return null;
+
+  try {
+    const parsed = new URL(value, window.location.origin);
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      return null;
+    }
+    return parsed.href;
+  } catch {
+    return null;
+  }
+}
+
 function updateURL(topic) {
   const url = new URL(window.location.href);
   url.searchParams.set("topic", topic);
@@ -222,9 +237,10 @@ function Tree(data, {
   if (labels) {
     const labelContainer = node
       .append("a")
-      .attr("href", (d) => d.data.url || null)
-      .attr("target", (d) => (d.data.url ? "_blank" : null))
-      .attr("rel", (d) => (d.data.url ? "noopener noreferrer" : null));
+      .attr("href", (d) => sanitizeExternalUrl(d.data.url))
+      .attr("target", (d) => (sanitizeExternalUrl(d.data.url) ? "_blank" : null))
+      .attr("rel", (d) => (sanitizeExternalUrl(d.data.url) ? "noopener noreferrer" : null))
+      .attr("referrerpolicy", (d) => (sanitizeExternalUrl(d.data.url) ? "no-referrer" : null));
 
     labelContainer
       .append("text")
@@ -236,8 +252,8 @@ function Tree(data, {
       .attr("stroke", halo)
       .attr("stroke-width", haloWidth)
       .attr("fill", textFill)
-      .style("cursor", (d) => (d.data.url ? "pointer" : "default"))
-      .style("text-decoration", (d) => (d.data.url ? "underline" : "none"))
+      .style("cursor", (d) => (sanitizeExternalUrl(d.data.url) ? "pointer" : "default"))
+      .style("text-decoration", (d) => (sanitizeExternalUrl(d.data.url) ? "underline" : "none"))
       .text((d, i) => labels[i]);
   }
 
@@ -295,8 +311,9 @@ function mergeUrlsIntoTree(topicTree, urlTree) {
     const currentPath = parentPath ? `${parentPath} > ${node.name}` : node.name;
     const metadata = lookup.get(currentPath);
 
-    if (metadata?.url) {
-      node.url = metadata.url;
+    const safeUrl = sanitizeExternalUrl(metadata?.url);
+    if (safeUrl) {
+      node.url = safeUrl;
     }
 
     if (metadata?.resources) {
